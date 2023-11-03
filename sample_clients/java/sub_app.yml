@@ -1,0 +1,44 @@
+topic:
+  name: alert_testing_01
+  partitions: 1
+  rf: 3
+server:
+  port: 9088
+spring:
+  kafka:
+    bootstrap-servers: 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+    properties:
+      schema.registry.url: http://192.168.137.101:8081
+    consumer:
+      bootstrap-servers: 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+      group-id: alert_testing_01_cg_java
+      client-id: alert_testing_01_java_consumer
+      max-poll-records: 500
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      #value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      value-deserializer:  org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        #specific.avro.reader: true
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor
+        sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        sasl.kerberos.service.name: kafka
+        sasl.mechanism: GSSAPI
+        security.protocol: SASL_PLAINTEXT
+        confluent.monitoring.interceptor.bootstrap.servers: 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+        confluent.monitoring.interceptor.security.protocol: SASL_PLAINTEXT
+        confluent.monitoring.interceptor.sasl.kerberos.service.name: kafka
+        confluent.monitoring.interceptor.sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        confluent.monitoring.interceptor.sasl.mechanism: GSSAPI
+    admin:
+      properties:
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringConsumerInterceptor
+        sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        sasl.kerberos.service.name: kafka
+        sasl.mechanism: GSSAPI
+        security.protocol: SASL_PLAINTEXT
+    template:
+      default-topic:
+logging:
+  level:
+    root: info

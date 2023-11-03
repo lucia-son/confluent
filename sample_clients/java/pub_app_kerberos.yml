@@ -1,0 +1,45 @@
+topic:
+  name: books
+  partitions: 3
+  rf: 3
+server:
+  port: 9080
+spring:
+  kafka:
+    bootstrap-servers:
+      - 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+    properties:
+      schema.registry.url: http://192.168.137.101:8081
+    producer:
+      bootstrap-servers:
+        - 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      acks: 1
+      batch-size: 32000
+      client-id: spring-boot-producer
+      retries: 2147483647
+      properties:
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
+        #sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        #sasl.kerberos.service.name: kafka
+        #sasl.mechanism: GSSAPI
+        security.protocol: PLAINTEXT
+        confluent.monitoring.interceptor.bootstrap.servers: 192.168.137.101:9092,192.168.137.102:9092,192.168.137.103:9092
+        confluent.monitoring.interceptor.security.protocol: PLAINTEXT
+        #confluent.monitoring.interceptor.sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        #confluent.monitoring.interceptor.sasl.kerberos.service.name: kafka
+        #confluent.monitoring.interceptor.sasl.mechanism: GSSAPI
+    admin:
+      properties:
+        interceptor.classes: io.confluent.monitoring.clients.interceptor.MonitoringProducerInterceptor
+        #sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/root/applications/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+        #sasl.kerberos.service.name: kafka
+        #sasl.mechanism: GSSAPI
+        security.protocol: PLAINTEXT
+  template:
+    default-topic:
+logging:
+  level:
+    root: info
+
