@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: elk
+  name: elasticsearch-config
+  labels:
+    app: elasticsearch
+data:
+  elasticsearch.yml: |-
+    cluster.name: tester
+    network.host: 0.0.0.0

@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  namespace: confluent
+spec:
+  replicas: 1
+  serviceName: mysql
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mysql
+        image: mysql:8.0
+        ports:
+          - name: tpc
+            protocol: TCP
+            containerPort: 3306
+        env:
+          - MYSQL_ROOT_PASSWORD=test1234
+        volumeMounts:
+          - name: mysqlvol
+            mountPath: /var/lib/mysql
+      volumes:
+      - name: mysqlvol
+        persistentVolumeClaim:
+          claimName: local-volume-pvc-mysql

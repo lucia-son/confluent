@@ -1,0 +1,23 @@
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: Connector
+metadata:
+  name: mysql-jdbc-sink
+  namespace: confluent
+spec:
+  class: "io.confluent.connect.jdbc.JdbcSinkConnector"
+  taskMax: 1
+  connectClusterRef:
+    name: connect
+  configs:
+    connection.url: "jdbc:mysql://mysql:3306/cdctest"
+    connection.user: "confluent"
+    connection.password: "test123"
+    db.timezone: "Asia/Seoul"
+    insert.mode: "upsert"
+    pk.mode: "record_value"
+    pk.fields: "id"
+    table.name.format: "sinked_contents"
+    topics: "mysqlcdc01.cdctest.contents"
+    auto.create: "true"
+    auto.evolve: "true"

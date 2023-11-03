@@ -1,0 +1,27 @@
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: Connector
+metadata:
+  name: debezium-mysql-cdc-src
+  namespace: confluent
+spec:
+  class: "io.debezium.connector.mysql.MySqlConnector"
+  taskMax: 1
+  connectClusterRef:
+    name: connect
+  configs:
+    database.hostname: mysql
+    database.port: "3306"
+    database.user: confluent
+    database.allowPublicKeyRetrieval: "true"
+    database.password: test123
+    database.server.id: "1"
+    topic.prefix: mysqlcdc01
+    table.include.list: "cdctest.contents"
+    schema.history.internal.kafka.bootstrap.servers: kafka:9071
+    schema.history.internal.kafka.topic: "mysqlcdc01.cdctest.history"
+    transforms: unwrap
+    transforms.unwrap.type: "io.debezium.transforms.ExtractNewRecordState"
+    include.schema.changes: "false"
+    transforms.unwrap.delete.handling.mode: "rewrite"
+    transforms.unwrap.drop.tombstones: "false"
