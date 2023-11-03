@@ -1,0 +1,7 @@
+---
+all:
+  vars:
+  
+    health_checks_enabled: false
+    skip_restarts: true
+

@@ -1,0 +1,20 @@
+zookeeper:
+  hosts:
+    zk01:
+
+kafka_broker:
+  hosts:
+    br01: 
+      broker_id: 1
+
+schema_registry:
+  hosts:
+    sr-ksql01:
+
+kafka_connect:
+  hosts:
+    cn01: 
+
+control_center:
+  hosts:
+    control01:
