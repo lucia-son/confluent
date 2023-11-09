@@ -24,6 +24,7 @@ control_center_config_prefix_path: "{{ control_center_config_prefix.strip('/') }
 kafka_connect_replicator_config_prefix_path: "{{ kafka_connect_replicator_config_prefix.strip('/') }}"
 
 #### Zookeeper Variables ####
+# To modify zookeeper service name, we need to change this one not in the inventory file.#  
 zookeeper_service_name: confluent-zookeeper
 zookeeper_main_package: "{{ 'confluent-server' if confluent_server_enabled|bool else 'confluent-kafka'}}"
 zookeeper_default_user: cp-kafka
