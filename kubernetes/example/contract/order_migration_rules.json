@@ -1,0 +1,20 @@
+{
+  "ruleSet": {
+    "migrationRules": [
+      {
+        "name": "changeStateToStatus",
+        "kind": "TRANSFORM",
+        "type": "JSONATA",
+        "mode": "UPGRADE",
+        "expr": "$merge([$sift($, function($v, $k) {$k != 'state'}), {'status': $.'state'}])"
+      },
+      {
+        "name": "changeStatusToState",
+        "kind": "TRANSFORM",
+        "type": "JSONATA",
+        "mode": "DOWNGRADE",
+        "expr": "$merge([$sift($, function($v, $k) {$k != 'status'}), {'state': $.'status'}])"
+      }
+    ]
+  }
+}

@@ -8,6 +8,5 @@ spec:
   data:
     configRef: payment-schema-config 
     format: avro
-  schemaRegistryClusterRef: 
-    name: schemaregistry-0
-    namespace: confluent
+  schemaRegistryRest: 
+    endpoint: http://schemaregistry.confluent.svc.cluster.local:8081 

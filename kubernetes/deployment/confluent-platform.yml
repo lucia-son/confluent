@@ -70,6 +70,9 @@ spec:
   image:
     application: confluentinc/cp-schema-registry:7.5.1
     init: confluentinc/confluent-init-container:2.7.1
+  configOverrides: 
+    server:
+      - resource.extension.class=io.confluent.kafka.schemaregistry.rulehandler.RuleSetResourceExtension 
   externalAccess:
     type: nodePort
     nodePort:

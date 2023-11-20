@@ -1,0 +1,10 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Schema
+metadata:
+  name: order-value
+  namespace: confluent
+spec:
+  compatibilityLevel: FULL
+  data:
+    configRef: order-schema-config 
+    format: avro

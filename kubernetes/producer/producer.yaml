@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: elastic
+  namespace: confluent
+spec:
+  serviceName: elastic
+  podManagementPolicy: Parallel
+  replicas: 1
+  selector:
+    matchLabels:
+      app: elastic
+  template:
+    metadata:
+      labels:
+        app: elastic
+    spec:
+      containers:
+      - name: elastic
+        image: confluentinc/cp-kafka:7.5.1
+        command:
+        - /bin/sh
+        - -c
+        - |
+        kafka-avro-console-producer \
+        --topic test01 \
+        --broker-list  \
+        --property schema.registry.url= \
+        --property value.schema.id="" \
+        --property rule.executors=checkIdLength \
+        --property rule.executors.checkIdLength.class=io.confluent.kafka.schemaregistry.rules.cel.CelExecutor
+        resources:
+          requests:
+            memory: 512Mi # 768Mi
+            cpu: 500m # 1000m

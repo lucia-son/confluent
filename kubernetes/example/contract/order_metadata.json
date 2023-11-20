@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "properties": {
+       "owner": "OrdersDevTeam",
+       "slo_timeliness_secs": "10"
+    } 
+  }
+}

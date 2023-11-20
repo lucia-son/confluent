@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orders-schema-config
+  namespace: confluent
+data:
+  schema: |
+    {
+      "name" : "Order",
+      "namespace": "young.com",
+      "type": "record",
+      "fields": [
+    {
+      "name": "orderId",
+      "type": "int"
+    },
+    {
+      "name": "customerId",
+      "type": "int"
+    },
+    { 
+      "name": "totalPriceCents",
+      "type": "int"
+    },
+    {
+      "name": "state",
+      "type": {
+        "type": "enum",
+        "name": "OrderStatus",
+        "symbols": [
+          "Pending",
+          "Processing",
+          "Completed",
+          "Canceled",
+          "Unknown"
+        ],
+        "default": "Unknown"  
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+          }
+        }
+      ]
+    }
+  metadata: 
+    properties": |
+        {
+          "owner": "OrdersDevTeam",
+          "slo_timeliness_secs": "10"
+     } 
