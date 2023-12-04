@@ -1,0 +1,19 @@
+{
+  "name": "replicator-01",
+  "config": {
+    "group.id":"connect-cluster",
+    "connector.class": "io.confluent.connect.replicator.ReplicatorSourceConnector",
+    "topic.regex": "^(prefix)(.*)",
+    "key.converter": "io.confluent.connect.replicator.util.ByteArrayConverter",
+    "value.converter": "io.confluent.connect.replicator.util.ByteArrayConverter",
+    "header.converter": "io.confluent.connect.replicator.util.ByteArrayConverter",
+    "src.kafka.bootstrap.servers": "broker:9092",
+    "src.consumer.group.id": "<replicator_cg_name>",
+    "dest.kafka.bootstrap.servers": "broker:9092",
+    "producer.override.bootstrap.servers": "broker:9092",
+    "topic.rename.format": "replicated_${topic}",
+    "confluent.topic.replication.factor": 3,
+    "provenance.header.enable": "true",
+    "tasks.max": "5"
+  }
+}

@@ -1,0 +1,20 @@
+{
+        "name": "athena-source-01",
+        "config":  {
+          "name": "athena-source-01",
+          "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+	        "connection.url": "<awsathena_jdbc_connection_url>",
+          "tasks.max": "1",
+          "db.timezone": "Asia/Seoul",
+          "topic.prefix": "<topic>",
+          "key.converter": "io.confluent.connect.avro.AvroConverter",
+          "key.converter.schema.registry.url": "http://schema-registry:8081",
+          "value.converter": "io.confluent.connect.avro.AvroConverter",
+          "value.converter.schema.registry.url": "http://schema-registry:8081",
+          "confluent.topic.bootstrap.servers": "broker:9092",
+	        "auto.create.topics.enable": "true",
+          "mode": "bulk",
+	        "poll.interval.ms": "2147483647",
+	        "query": "<query>"
+       }
+}

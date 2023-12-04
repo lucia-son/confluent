@@ -1,0 +1,18 @@
+{
+	  "name": "rabbitmq-source-01",
+	  "config":  {
+		  "name": "rabbitmq-source-01",
+		  "connector.class": "io.confluent.connect.rabbitmq.RabbitMQSourceConnector",
+		  "key.converter": "io.confluent.connect.avro.AvroConverter",
+		  "value.converter": "io.confluent.connect.avro.AvroConverter",
+		  "key.converter.schema.registry.url": "http://schema-registry:8081",
+		  "value.converter.schema.registry.url": "http://schema-registry:8081",
+		  "rabbitmq.host":"<rmq-host>",
+		  "rabbitmq.username": "<rmq-user>",
+		  "rabbitmq.password": "<rmq-password>",
+		  "rabbitmq.port": "5672",
+		  "kafka.topic": "<topic>",
+		  "rabbitmq.queue": "<rmq-queue>"
+	  }
+ }
+

@@ -1,0 +1,15 @@
+{
+	  "name": "elastic-sink-01",
+	  "config":  {
+		  "name": "elastic-sink-01",
+		  "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+		  "type.name": "_doc",
+ 		  "key.ignore": "true",
+		  "schema.ignore": "true",
+		  "drop.invalid.message": "true",
+		  "tasks.max": "1",
+		  "schema.compatibility": "NONE",
+		  "topics": "<topic>",
+          "connection.url": "http://<elastic.url>"
+	  }
+ } 

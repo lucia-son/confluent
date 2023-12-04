@@ -1,0 +1,24 @@
+{
+  "name": "mysql-sink-custom-timestamp",
+  "config":  {
+    "name": "mysql-sink-custom-timestamp",
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "connection.url": "<mysql_jdbc_connection_url>?useUnicode=yes&characterEncoding=UTF-8",
+    "connection.user": "<mysql-user>",
+    "connection.password": "<mysql-password>",
+    "db.timezone": "Asia/Seoul",
+    "tasks.max": "3",
+    "insert.mode": "upsert",
+    "pk.mode": "record_value",
+    "pk.fields": "id",
+    "table.name.format": "<table>",
+    "topics": "<topic>",
+    "auto.create": "true",
+    "auto.evolve": "true",
+    "transforms": "transform_date",
+    "transforms.transform_date.type": "org.apache.kafka.connect.transforms.CustomTimestampConverter$Value",
+    "transforms.transform_date.format": "yyyy-MM-dd HH:mm:ss",
+    "transforms.transform_date.fields": "dttm",
+    "transforms.transform_date.target.type": "string"
+  }
+}

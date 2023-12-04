@@ -1,0 +1,14 @@
+{
+	  "name": "kinesis-source-01",
+	  "config":  {
+		  "name": "kinesis-source-01",
+		  "connector.class": "io.confluent.connect.kinesis.KinesisSourceConnector",
+		  "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+		  "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
+ 		  "tasks.max": "1",
+		  "kinesis.stream": "<kinesis_stream>",
+		  "kinesis.region": "ap-northeast-2",
+		  "kafka.topic": "<topic>"
+	  }
+ }
+

@@ -1,0 +1,19 @@
+{       
+  "name": "elastic-source-01",
+   "config": {
+      	"name": "elastic-source-01",
+        "connector.class": "com.github.dariobalinzo.ElasticSourceConnector",
+	"transforms": "dropESField",
+	"transforms.dropESField.type" :"org.apache.kafka.connect.transforms.ReplaceField$Value",
+	"transforms.dropESField.blacklist" :"esid, esindex",
+        "tasks.max": "2",
+        "es.host" : "<elastic_search_host>",
+        "es.port" : "9200",
+	"es.user": "<user>",
+	"es.password": "<password>",
+        "index.prefix" : "<index>",
+        "topic.prefix" : "<topic-prefix>",
+        "incrementing.field.name" : "<field>",
+	"incrementing.secondary.field.name": "<sec_field>"
+        }
+}

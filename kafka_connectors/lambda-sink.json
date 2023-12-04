@@ -1,0 +1,28 @@
+{
+  "name": "lambda-sink-01",
+  "config": {
+    "name": "lambda-sink-01",
+    "group.id":"connect-cluster",
+    "connector.class": "io.confluent.connect.aws.lambda.AwsLambdaSinkConnector",
+    "topics": "<topic>",
+    "tasks.max": "1",
+    "aws.lambda.function.name": "<func_name>",
+    "aws.lambda.region": "ap-northeast-2",
+    "aws.lambda.invocation.type": "sync",
+    "aws.lambda.batch.size": "10000",
+    "record.converter.class": "io.confluent.connect.aws.lambda.converters.JsonKeyValueConverter",
+    "reporter.bootstrap.servers": "broker:9092",
+    "reporter.result.topic.name": "<result_topic>",
+    "reporter.result.topic.replication.factor": "1",
+    "reporter.result.topic.partitions": "1",
+    "reporter.result.topic.key.format": "json",
+    "reporter.result.topic.value.format": "json",
+    "reporter.error.topic.name": "<error_topic>",
+    "reporter.error.topic.replication.factor": "1",
+    "reporter.error.topic.partitions": "1",
+    "reporter.error.topic.key.format": "json",
+    "reporter.error.topic.value.format": "json",
+    "confluent.topic.bootstrap.servers": "broker:9092",
+    "confluent.topic.replication.factor": "1"
+  }
+}

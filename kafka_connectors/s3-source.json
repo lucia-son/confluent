@@ -1,0 +1,23 @@
+{
+  "name": "s3-source",
+  "config": {
+    "name": "s3-source",
+    "connector.class": "io.confluent.connect.s3.source.S3SourceConnector",
+    "mode": "GENERIC",
+    "tasks.max": "1",
+    "task.batch.size": "2000",
+    "record.max.batch.size": "1000",
+    "topics.dir":"<dir>/<subdir>/",
+    "topic.regex.list": "<prefix>:(.*)",
+    "s3.region": "ap-northeast-2",
+    "s3.bucket.name": "<bucket_name>",
+    "format.class": "io.confluent.connect.s3.format.string.StringFormat",
+    "confluent.license": "",
+    "confluent.topic.bootstrap.servers": "broker:9092",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schemas.enable": "false"
+  }
+}
