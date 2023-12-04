@@ -9,7 +9,6 @@ all:
     mask_sensitive_logs: false
     mask_sensitive_diff: false
     
-    zookeeper_service_name: "confluent-melon-zookeeper"
     ### os user and group
     archive_owner: root
     archive_group: root
@@ -42,7 +41,7 @@ all:
     confluent_archive_file_remote: false
     confluent_archive_file_source: "/home/confluent/install_files/confluent-7.2.6.tar.gz"
     config_prefix: ""
-    zookeeper_config_prefix: "/melon-zookeeper"
+    zookeeper_config_prefix: "/zookeeper"
     kafka_broker_config_prefix: "/kafka"
     kafka_connect_config_prefix: "/connect"
     ksql_config_prefix: "/ksql" 
@@ -55,7 +54,7 @@ all:
     ### sasl authentication
     sasl_protocol: kerberos
     kerberos_configure: false
-    zookeeper_keytab_path: "{{ archive_destination_path }}/melon-zookeeper/zookeeper.keytab"
+    zookeeper_keytab_path: "{{ archive_destination_path }}/zookeeper/zookeeper.keytab"
     kafka_broker_keytab_path: "{{ archive_destination_path }}/kafka/kafka.keytab"
     kafka_connect_keytab_path: "{{ archive_destination_path }}/connect/connect.keytab"
     schema_registry_keytab_path: "{{ archive_destination_path }}/schema-registry/schema.keytab"
@@ -63,10 +62,10 @@ all:
     ksql_keytab_path: "{{ archive_destination_path }}/ksql/ksql.keytab"
 
     ### component cluster group
-    kafka_connect_cluster_ansible_group_names:
-      - connect-cluster
-    ksql_cluster_ansible_group_names:
-      - tester-ksql
+    #kafka_connect_cluster_ansible_group_names:
+    #  - small-one-cluster
+    #ksql_cluster_ansible_group_names:
+    #  - tester-ksql
 
     ### ssl
     ssl_enabled: false
@@ -101,7 +100,7 @@ all:
     ### copy files
     zookeeper_copy_files:
       - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/zookeeper-log4j.properties"
-        destination_path: "{{archive_destination_path}}/melon-zookeeper/zookeeper-log4j.properties"
+        destination_path: "{{archive_destination_path}}/zookeeper/zookeeper-log4j.properties"
     kafka_broker_copy_files:
       - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/kafka-log4j.properties"
         destination_path: "{{archive_destination_path}}/kafka/kafka-log4j.properties"
@@ -120,7 +119,7 @@ all:
 
     ### zookeeper
     zookeeper_chroot: /confluent
-    zookeeper_log_dir: /logs/melon-zookeeper
+    zookeeper_log_dir: /logs/zookeeper
     zookeeper_service_environment_overrides:
       KAFKA_HEAP_OPTS: "-Xms512m -Xmx512m"
       KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
@@ -173,6 +172,8 @@ all:
       CONTROL_CENTER_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
       CONTROL_CENTER_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
       CONTROL_CENTER_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/control-center/control-center-log4j.properties"
+   
+    schema_registry_url: "http://tester101.young.com:8081" 
 
 zookeeper:
   vars:
@@ -180,7 +181,7 @@ zookeeper:
     zookeeper_peer_port: 2889
     zookeeper_leader_port: 3889
     zookeeper_custom_properties:
-      dataDir: /data/melon-zookeeper
+      dataDir: /data/zookeeper
       tickTime: 2000
       initLimit: 5
       syncLimit: 2
@@ -199,14 +200,6 @@ zookeeper:
       zookeeper_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/zookeeper_tester101.keytab
       zookeeper_kerberos_principal: zookeeper/tester101.young.com@KAFKA.SECURE
       zookeeper_id: 101
-    tester102.young.com:
-      zookeeper_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/zookeeper_tester102.keytab
-      zookeeper_kerberos_principal: zookeeper/tester102.young.com@KAFKA.SECURE
-      zookeeper_id: 102
-    tester103.young.com:
-      zookeeper_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/zookeeper_tester103.keytab
-      zookeeper_kerberos_principal: zookeeper/tester103.young.com@KAFKA.SECURE
-      zookeeper_id: 103
 
 kafka_broker:
   vars:
@@ -221,19 +214,19 @@ kafka_broker:
       num.partitions: 1
       num.recovery.threads.per.data.dir: 1
       message.max.bytes: 20971760
-      default.replication.factor: 3
-      min.insync.replicas: 2
+      default.replication.factor: 1
+      min.insync.replicas: 1
       replica.lag.time.max.ms: 30000
       unclean.leader.election.enable: "false"
       auto.create.topics.enable: "false"
       group.initial.rebalance.delay.ms: 3000
-      offsets.topic.replication.factor: 3
-      transaction.state.log.min.isr: 2
-      transaction.state.log.replication.factor: 3
+      offsets.topic.replication.factor: 1
+      transaction.state.log.min.isr: 1
+      transaction.state.log.replication.factor: 1
       confluent.balancer.enable: "false"
       confluent.balancer.heal.uneven.load.trigger: EMPTY_BROKER
       confluent.balancer.disk.max.load: 0.85
-      confluent.balancer.topic.replication.factor: 3
+      confluent.balancer.topic.replication.factor: 1
       confluent.tier.enable: "false"
       zookeeper.set.acl: false
   hosts:
@@ -244,43 +237,27 @@ kafka_broker:
       kafka_broker_custom_properties:
         listeners: SASL_PLAINTEXT://tester101.young.com:9092
         security.inter.broker.protocol: SASL_PLAINTEXT
-    tester102.young.com:
-      kafka_broker_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/kafka_tester102.keytab
-      kafka_broker_kerberos_principal: kafka/tester102.young.com@KAFKA.SECURE
-      broker_id: 102
-      kafka_broker_custom_properties:
-        listeners: SASL_PLAINTEXT://tester102.young.com:9092
-        security.inter.broker.protocol: SASL_PLAINTEXT
-    tester103.young.com:
-      kafka_broker_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/kafka_tester103.keytab
-      kafka_broker_kerberos_principal: kafka/tester103.young.com@KAFKA.SECURE
-      broker_id: 103
-      kafka_broker_custom_properties:
-        listeners: SASL_PLAINTEXT://tester103.young.com:9092
-        security.inter.broker.protocol: SASL_PLAINTEXT
 
 kafka_connect:
-  children: 
-    connect-cluster: 
-      vars:
-        kafka_connect_group_id: connect-cluster
-        kafka_connect_custom_properties:
-          config.storage.topic: connect-configs
-          offset.storage.topic: connect-offsets
-          status.storage.topic: connect-status
-          config.storage.replication.factor: 3
-          offset.storage.partitions: 25
-          offset.storage.replication.factor: 3
-          offset.flush.interval.ms: 10000
-          status.storage.partitions: 5
-          status.storage.replication.factor: 3
-          connector.client.config.override.policy: All
-        kafka_connect_custom_rest_extension_classes:
+  vars:
+     kafka_connect_group_id: small-one-cluster
+     kafka_connect_custom_properties:
+       config.storage.topic: small-one-configs
+       offset.storage.topic: small-one-offsets
+       status.storage.topic: small-one-status
+       config.storage.replication.factor: 1
+       offset.storage.partitions: 25
+       offset.storage.replication.factor: 1
+       offset.flush.interval.ms: 10000
+       status.storage.partitions: 5
+       status.storage.replication.factor: 1
+       connector.client.config.override.policy: All
+       kafka_connect_custom_rest_extension_classes:
           - io.confluent.connect.replicator.monitoring.ReplicatorMonitoringExtension
-      hosts:
-        tester103.young.com:
-          kafka_connect_kerberos_keytab_path: /home/confluent/ansible/source/keytabs/connect.keytab
-          kafka_connect_kerberos_principal: connect@KAFKA.SECURE
+  hosts:
+    tester101.young.com:
+      kafka_connect_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/connect.keytab
+      kafka_connect_kerberos_principal: connect@KAFKA.SECURE
 
 schema_registry:
   vars:
@@ -289,7 +266,7 @@ schema_registry:
       schema.registry.group.id: tester-schema-cluster
   hosts:
     tester101.young.com:
-      schema_registry_kerberos_keytab_path: /home/confluent/ansible/source/keytabs/schema.keytab
+      schema_registry_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/schema.keytab
       schema_registry_kerberos_principal: schema@KAFKA.SECURE
 
 ksql:
@@ -307,22 +284,28 @@ ksql:
 control_center:
   vars:
     control_center_custom_properties:
-      schema.registry.url: "http://tester101.young.com:8081"
       confluent.controlcenter.data.dir: /data/control-center
       confluent.controlcenter.command.topic: _confluent-command
-      confluent.controlcenter.command.topic.replication: 3
+      confluent.controlcenter.command.topic.replication: 1
       confluent.controlcenter.internal.topics.partitions: 12
-      confluent.controlcenter.internal.topics.replication: 3
+      confluent.controlcenter.internal.topics.replication: 1
       confluent.metrics.topic: _confluent-metrics
       confluent.metrics.topic.partitions: 12
-      confluent.metrics.topic.replication: 3
+      confluent.metrics.topic.replication: 1
+      confluent.controlcenter.kafka.small-two.bootstrap.servers: tester102.young.com:9092 
+      confluent.controlcenter.kafka.small-two.security.protocol: SASL_PLAINTEXT
+      confluent.controlcenter.kafka.small-two.sasl.mechanism: GSSAPI
+      confluent.controlcenter.kafka.small-two.sasl.jaas.config: com.sun.security.auth.module.Krb5LoginModule required useKeyTab=true storeKey=true keyTab="/engn/control-center/confluent_c3.keytab" principal="confluent_c3@KAFKA.SECURE";
+      confluent.controlcenter.kafka.small-two.sasl.kerberos.service.name: kafka
+      confluent.controlcenter.connect.small-two-cluster.cluster: http://tester102.young.com:8083
+      confluent.controlcenter.kafka.small-two.cprest.url: http://tester102.young.com:8090 
       confluent.controlcenter.streams.num.stream.threads: 8
       confluent.controlcenter.ui.autoupdate.enable: "false"
       confluent.controlcenter.ui.controller.chart.enable: "true"
       confluent.controlcenter.usage.data.collection.enable: "false"
-      confluent.controlcenter.id: 105
-      confluent.controlcenter.name: tester
+      confluent.controlcenter.id: 1
+      confluent.controlcenter.name: small-one
   hosts:
     tester105.young.com:
-      control_center_kerberos_keytab_path: /home/confluent/ansible/source/keytabs/confluent_c3.keytab
+      control_center_kerberos_keytab_path: /home/confluent/confluent-kafka/ansible/source/keytabs/confluent_c3.keytab
       control_center_kerberos_principal: confluent_c3@KAFKA.SECURE
