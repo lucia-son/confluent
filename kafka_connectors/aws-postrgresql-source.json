@@ -1,0 +1,25 @@
+{
+  "name": "aws-postgresql-source-01",
+  "config": {
+    "name": "aws-postgresql-source-01",
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": <postgresql_host>,
+    "database.port": "3000",
+    "database.user": <user>,
+    "database.password": <password>,
+    "database.dbname": <database_name>,
+    "database.server.name": "psqldb",
+    "table.include.list": <schema.table>,
+    "plugin.name": "pgoutput",
+    "output.data.format": "AVRO",
+    "tasks.max": "1",
+    "slot.name": <slot.name>,
+    "auto.create": "true",
+    "tombstones.on.delete": "false",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "key.converter": "io.confluent.connect.avro.AvroConverter",
+    "key.converter.schema.registry.url": "http://schema-registry:8081"
+  } 
+}
+

@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'com.hhmall.test'
+version '1.0'
+
+repositories {
+
+    mavenCentral()
+
+    maven {
+        url "https://packages.confluent.io/maven"
+    }
+
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+
+}
+
+dependencies {
+
+    implementation 'org.apache.kafka:kafka-clients:3.3.1'
+    implementation 'io.confluent:kafka-schema-registry-client:7.3.1'
+    implementation 'io.confluent:monitoring-interceptors:7.3.1'
+    implementation 'io.confluent:kafka-avro-serializer:7.3.1'
+    implementation ('io.confluent:kafka-streams-avro-serde:7.3.1') {
+        exclude group: 'org.slf4j' , module: 'slf4j-log4j12'
+    }
+    implementation 'org.apache.avro:avro:1.11.0'
+    implementation 'com.commercehub.gradle.plugin:gradle-avro-plugin:0.99.99'
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'mysql:mysql-connector-java:8.0.30'
+    implementation 'org.jetbrains:annotations:20.1.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+

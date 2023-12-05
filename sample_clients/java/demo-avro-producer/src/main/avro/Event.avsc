@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "default": null,
+      "name": "event",
+      "type": [
+        "null",
+        {
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "name": "Board",
+  "namespace": "com.hhmall.test",
+  "type": "record"
+}
