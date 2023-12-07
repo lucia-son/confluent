@@ -30,12 +30,12 @@ all:
 
     ### package install
     confluent_server_enabled: true
-    confluent_package_version: "7.4.1"
+    confluent_package_version: "7.4.2"
     confluent_cli_download_enabled: false
     installation_method: archive
     archive_destination_path: "/engn"
     confluent_archive_file_remote: false
-    confluent_archive_file_source: "/home/confluent/install_files/confluent-7.4.1.tar.gz"
+    confluent_archive_file_source: "/home/confluent/install_files/confluent-7.4.2.tar.gz"
     config_prefix: ""
     zookeeper_config_prefix: "/zookeeper"
     kafka_broker_config_prefix: "/kafka"
@@ -65,42 +65,42 @@ all:
     jmxexporter_enabled: true
     jmxexporter_url_remote: false
     jmxexporter_jar_url_force: true
-    jmxexporter_jar_url: "/home/confluent/ansible/source/jmx/jmx_prometheus_javaagent-0.18.0.jar"
+    jmxexporter_jar_url: "/home/confluent/confluent-kafka/ansible/source/jmx/jmx_prometheus_javaagent-0.18.0.jar"
     jmxexporter_jar_path: "{{archive_destination_path}}/prometheus/jmx_prometheus_javaagent.jar"
-    zookeeper_jmxexporter_config_source_path: "/home/confluent/ansible/source/jmx/zookeeper.yml"
+    zookeeper_jmxexporter_config_source_path: "/home/confluent/confluent-kafka/ansible/source/jmx/zookeeper.yml"
     zookeeper_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/zookeeper.yml"
     zookeeper_jmxexporter_port: 9898
-    kafka_broker_jmxexporter_config_source_path: "/home/confluent/ansible/source/jmx/kafka_broker.yml"
+    kafka_broker_jmxexporter_config_source_path: "/home/confluent/confluent-kafka/ansible/source/jmx/kafka_broker.yml"
     kafka_broker_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/kafka_broker.yml"
     kafka_broker_jmxexporter_port: 7071
-    kafka_connect_jmxexporter_config_source_path: "/home/confluent/ansible/source/jmx/kafka_connect.yml"
+    kafka_connect_jmxexporter_config_source_path: "/home/confluent/confluent-kafka/ansible/source/jmx/kafka_connect.yml"
     kafka_connect_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/kafka_connect.yml"
     kafka_connect_jmxexporter_port: 7073
-    schema_registry_jmxexporter_config_source_path: "/home/confluent/ansible/source/jmx/confluent_schemaregistry.yml"
+    schema_registry_jmxexporter_config_source_path: "/home/confluent/confluent-kafka/ansible/source/jmx/confluent_schemaregistry.yml"
     schema_registry_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/confluent_schemaregistry.yml"
     schema_registry_jmxexporter_port: 9696
-    ksql_jmxexporter_config_source_path: "/home/confluent/ansible/source/jmx/ksql.yml"
+    ksql_jmxexporter_config_source_path: "/home/confluent/confluent-kafka/ansible/source/jmx/ksql.yml"
     ksql_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/ksql.yml"
     ksql_jmxexporter_port: 7072
 
     ### copy files
     zookeeper_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/zookeeper-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/zookeeper-log4j.properties"
         destination_path: "{{archive_destination_path}}/zookeeper/zookeeper-log4j.properties"
     kafka_broker_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/kafka-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/kafka-log4j.properties"
         destination_path: "{{archive_destination_path}}/kafka/kafka-log4j.properties"
     kafka_connect_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/kafka-connect-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/kafka-connect-log4j.properties"
         destination_path: "{{archive_destination_path}}/connect/kafka-connect-log4j.properties"
     schema_registry_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/schema-registry-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/schema-registry-log4j.properties"
         destination_path: "{{archive_destination_path}}/schema-registry/schema-registry-log4j.properties"
     control_center_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/control-center-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/control-center-log4j.properties"
         destination_path: "{{archive_destination_path}}/control-center/control-center-log4j.properties"
     ksql_copy_files:
-      - source_path: "/home/confluent/ansible/source/log4j/ksqldb-log4j.properties"
+      - source_path: "/home/confluent/confluent-kafka/ansible/source/log4j/ksqldb-log4j.properties"
         destination_path: "{{archive_destination_path}}/ksql/ksqldb-log4j.properties"
 
     ### zookeeper
@@ -259,7 +259,6 @@ schema_registry:
 control_center:
   vars:
     control_center_custom_properties:
-      schema.registry.url: "http://tester101.young.com:8081"
       confluent.controlcenter.data.dir: /data/control-center
       confluent.controlcenter.command.topic: _confluent-command
       confluent.controlcenter.command.topic.replication: 3
@@ -274,5 +273,7 @@ control_center:
       confluent.controlcenter.usage.data.collection.enable: "false"
       confluent.controlcenter.id: 1
       confluent.controlcenter.name: tester
+      confluent.controlcenter.rest.thread.pool.min: 4
+      confluent.controlcenter.rest.thread.pool.max: 20
   hosts:
     tester105.young.com:
