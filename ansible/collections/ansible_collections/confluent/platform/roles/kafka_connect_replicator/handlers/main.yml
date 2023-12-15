@@ -1,5 +1,0 @@
----
-- name: Restart Kafka Connect Replicator
-  include_tasks: tasks/restart_and_wait.yml
-  when:
-    - not kafka_connect_replicator_skip_restarts
