@@ -1,0 +1,331 @@
+---
+all:
+  vars:
+    kerberos_configure: false
+
+    ### ansible
+    ansible_connection: ssh
+    ansible_user: confluent
+    ansible_become: true 
+    mask_secrets: false
+    mask_sensitive_logs: false
+    mask_sensitive_diff: false
+
+    ### os user and group
+    archive_owner: confluent
+    archive_group: confluent
+    zookeeper_user: confluent
+    zookeeper_group: confluent
+    kafka_broker_user: confluent
+    kafka_broker_group: confluent
+    schema_registry_user: confluent
+    schema_registry_group: confluent
+    kafka_connect_replicator_user: confluent
+    kafka_connect_replicator_group: confluent
+    ksql_user: confluent
+    ksql_group: confluent
+    control_center_user: confluent
+    control_center_group: confluent
+
+    ### jdk
+    custom_java_path: "/usr/lib/jvm/jdk-17-oracle-x64"
+
+    ### confluent kafka
+    confluent_server_enabled: true
+    confluent_package_version: "7.3.2"
+    confluent_cli_download_enabled: false
+
+    ### archive install
+    installation_method: archive
+    archive_destination_path: "/engn/dc2"
+    confluent_archive_file_remote: true
+    
+    ### deployment strategy
+    deployment_strategy: parrallel
+
+    ### sasl authentication
+    sasl_protocol: kerberos
+
+    ### ssl
+    ssl_enabled: false
+    ssl_mutual_auth_enabled: false
+
+    ### rbac
+    rbac_enabled: false
+
+    ### kafka listeners
+    kafka_broker_configure_multiple_listeners: false
+    kafka_broker_configure_control_plane_listener: false
+    #kafka_broker_inter_broker_listener_name: broker
+
+    ### kafka internal listener
+    schema_registry_kafka_listener_name: internal
+    kafka_connect_kafka_listener_name: internal
+    kafka_rest_kafka_listener_name: internal
+    ksql_kafka_listener_name: internal
+    ksql_processing_log_kafka_listener_name: internal
+    control_center_kafka_listener_name: internal
+
+    ### monitoring
+    jmxexporter_enabled: false
+    jmxexporter_url_remote: true
+    jmxexporter_version: 0.17.2
+    jmxexporter_jar_path: "{{archive_destination_path}}/prometheus/jmx_prometheus_javaagent.jar"
+    zookeeper_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/zookeeper.yml"
+    zookeeper_jmxexporter_port: 1234
+    kafka_broker_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/kafka_broker.yml"
+    kafka_broker_jmxexporter_port: 1235
+    schema_registry_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/schema_registry.yml"
+    schema_registry_jmxexporter_port: 1236 
+    kafka_connect_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/kafka_connect.yml"
+    kafka_connect_jmxexporter_port: 1237
+    ksql_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/ksql.yml"
+    ksql_jmxexporter_port: 1238
+    kafka_rest_jmxexporter_config_path: "{{archive_destination_path}}/prometheus/kafka_rest.yml"
+    kafka_rest_jmxexporter_port: 1239
+
+    ### copy files
+    zookeeper_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/zookeeper-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/zookeeper-log4j.properties"
+    kafka_broker_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/kafka-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/kafka-log4j.properties"
+      # - source_path: "/root/confluent/aws/credentials"
+      #   destination_path: "{{archive_destination_path}}/aws/credentials"
+    schema_registry_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/schema-registry-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/schema-registry-log4j.properties"
+    kafka_connect_replicator_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/kafka-connect-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/kafka-connect-log4j.properties"
+    ksql_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/ksqldb-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/ksqldb-log4j.properties"
+    kafka_rest_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/kafka-rest-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/kafka-rest-log4j.properties"
+    control_center_copy_files:
+      - source_path: "/home/confluent/ansible/source/log4j/control-center-log4j.properties"
+        destination_path: "{{archive_destination_path}}/log4j/control-center-log4j.properties"
+
+    ### zookeeper
+    ######################################################################
+
+    zookeeper_log_dir: /logs/dc2/zookeeper
+    zookeeper_chroot: /confluent
+    zookeeper_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xms512m -Xmx512m"
+      KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      KAFKA_GC_LOG_OPTS: "-Xlog:gc*:file={{zookeeper_log_dir}}/zookeeper-gc.log:time,tags:filecount=10,filesize=100M"
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/log4j/zookeeper-log4j.properties"
+
+    zookeeper_custom_properties:
+      dataDir: /data/dc2/zookeeper
+      tickTime: 2000
+      initLimit: 5
+      syncLimit: 2
+      maxClientCnxns: 0
+      autopurge.snapRetainCount: 10
+      autopurge.purgeInterval: 1
+      admin.enableServer: "false"
+      4lw.commands.whitelist: ruok,stat,srvr
+
+    zookeeper_service_overrides:
+      SuccessExitStatus: 143
+
+    ### kafka
+    ######################################################################
+    kafka_broker_log_dir: /logs/dc2/kafka
+
+    kafka_broker_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xms3g -Xmx3g"
+      KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      KAFKA_GC_LOG_OPTS: "-Xlog:gc*:file={{kafka_broker_log_dir}}/kafka-gc.log:time,tags:filecount=10,filesize=100M"
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/log4j/kafka-log4j.properties"
+
+    kafka_broker_custom_properties:
+      log.dirs: /data/dc2/kafka
+      log.retention.hours: 168
+      log.retention.check.interval.ms: 300000
+      log.segment.bytes: 1073741824
+      num.partitions: 3
+      num.recovery.threads.per.data.dir: 2
+
+      default.replication.factor: 1
+      min.insync.replicas: 1
+      replica.lag.time.max.ms: 30000
+      unclean.leader.election.enable: "false"
+
+      auto.create.topics.enable: "true"
+      group.initial.rebalance.delay.ms: 3000
+      offsets.topic.replication.factor: 1
+      transaction.state.log.min.isr: 1
+      transaction.state.log.replication.factor: 1
+
+      confluent.balancer.enable: "true"
+      confluent.balancer.heal.uneven.load.trigger: EMPTY_BROKER
+      confluent.balancer.disk.max.load: 0.85
+      confluent.balancer.topic.replication.factor: 1
+      confluent.tier.enable: "false"
+
+    kafka_broker_service_overrides:
+      SuccessExitStatus: 143
+
+    ### schema registry
+
+    schema_registry_log_dir: /logs/dc2/schema-registry
+    schema_registry_service_environment_overrides:
+      SCHEMA_REGISTRY_HEAP_OPTS: "-Xms512m -Xmx512m"
+      SCHEMA_REGISTRY_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      SCHEMA_REGISTRY_GC_LOG_OPTS: "-Xlog:gc*:file={{schema_registry_log_dir}}/schema-registry-gc.log:time,tags:filecount=10,filesize=100M"
+      SCHEMA_REGISTRY_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      SCHEMA_REGISTRY_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/log4j/schema-registry-log4j.properties"
+
+    schema_registry_custom_properties:
+      schema.compatibility.level: full
+
+    ### kafka connect_replicator
+
+    kafka_connect_replicator_log_dir: /logs/dc2/replicator
+
+    kafka_connect_replicator_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xms3g -Xmx3g"
+      KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      KAFKA_GC_LOG_OPTS: "-Xlog:gc*:file={{kafka_connect_replicator_log_dir}}/connect-gc.log:time,tags:filecount=10,filesize=100M"
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/log4j/kafka-connect-log4j.properties"
+      CLASSPATH: "{{archive_destination_path}}/confluent-{{confluent_package_version}}/share/java/kafka-connect-replicator/*"
+    
+
+    # kafka_connect_custom_rest_extension_classes:
+    #   - io.confluent.connect.replicator.monitoring.ReplicatorMonitoringExtension
+
+    kafka_connect_replicator_service_overrides:
+      SuccessExitStatus: 143
+
+    ### control center
+
+    control_center_log_dir: /logs/dc2/control-center
+    control_center_custom_java_args: "-Xlog:gc*:file={{control_center_log_dir}}/control-center-gc.log:time,tags:filecount=10,filesize=100M"
+    control_center_service_environment_overrides:
+      CONTROL_CENTER_HEAP_OPTS: "-Xms4g -Xmx4g"
+      CONTROL_CENTER_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true" 
+      CONTROL_CENTER_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      CONTROL_CENTER_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/log4j/control-center-log4j.properties"
+
+    control_center_service_overrides:
+      Restart: "no"
+      SuccessExitStatus: 143
+
+    control_center_custom_properties:
+      confluent.controlcenter.data.dir: /data/dc2/control-center
+      confluent.controlcenter.command.topic: _confluent-command
+      confluent.controlcenter.command.topic.replication: 1
+      confluent.controlcenter.internal.topics.partitions: 12
+      confluent.controlcenter.internal.topics.replication: 1
+      confluent.metrics.topic: _confluent-metrics
+      confluent.metrics.topic.partitions: 12
+      confluent.metrics.topic.replication: 1
+      confluent.controlcenter.streams.num.stream.threads: 8
+      confluent.controlcenter.ui.autoupdate.enable: "false"
+      confluent.controlcenter.ui.controller.chart.enable: "true"
+      confluent.controlcenter.usage.data.collection.enable: "false"
+      confluent.controlcenter.id: dc2
+      confluent.controlcenter.name: dc2
+      confluent.controlcenter.kafka.dc1.bootstrap.servers: br01:9092
+      confluent.controlcenter.kafka.dc2.bootstrap.servers: sr-ksql01:9092
+      confluent.controlcenter.connect.replicator.cluster: http://sr-ksql01:8083,http://control01:8083
+
+zookeeper:
+  # vars:
+  hosts:
+    cn01:
+      zookeeper_id: 101
+      zookeeper_kerberos_keytab_path: /home/confluent/keytabs/connect01.service.keytab
+      zookeeper_kerberos_principal: connect/cn01@KAFKA.SECURE
+
+kafka_broker:
+  # vars:
+  hosts:
+    sr-ksql01:
+      broker_id: 101
+      kafka_broker_kerberos_keytab_path: /home/confluent/keytabs/kafka_sr-ksql01.service.keytab
+      kafka_broker_kerberos_principal: kafka/sr-ksql01@KAFKA.SECURE
+      kafka_broker_custom_properties:
+        listeners: SASL_PLAINTEXT://sr-ksql01:9092
+        security.inter.broker.protocol: SASL_PLAINTEXT
+
+#schema_registry:
+#  vars:
+#    schema_registry_custom_properties:
+#      schema.registry.group.id: schema-cluster1
+#  hosts:
+#    cn01:
+
+kafka_connect_replicator:
+  vars:
+    kafka_connect_replicator_listener:
+      ssl_enabled: false
+      ssl_mutual_auth_enabled: false
+      sasl_protocol: kerberos
+
+    kafka_connect_replicator_bootstrap_servers: sr-ksql01:9092
+    kafka_connect_replicator_kerberos_principal: "replicator@KAFKA.SECURE"
+    kafka_connect_replicator_kerberos_keytab_path: "/home/confluent/keytabs/replicator.keytab"
+
+    kafka_connect_replicator_cluster_name: cp-rep
+    kafka_connect_replicator_cluster_id: cp-rep
+    kafka_connect_replicator_offset_start: connect
+    kafka_connect_replicator_offsets_topic: cp-rep-connect-offsets
+    kafka_connect_replicator_status_topic: cp-rep-connect-status
+    kafka_connect_replicator_storage_topic: cp-rep-connect-configs
+    kafka_connect_replicator_custom_properties:
+      name: dc1_to_dc2_rep
+      tasks.max: 2
+      topic.regex: .*m16.*
+      topic.rename.format: "m16cdc.${topic}"
+      rest.extension.classes: io.confluent.connect.replicator.monitoring.ReplicatorMonitoringExtension
+
+    kafka_connect_replicator_consumer_listener:
+      ssl_enabled: false
+      ssl_mutual_auth_enabled: false
+      sasl_protocol: none
+
+    kafka_connect_replicator_consumer_bootstrap_servers: br01:9092
+    kafka_connect_replicator_consumer_custom_properties:
+
+    kafka_connect_replicator_producer_listener:
+      ssl_enabled: false
+      ssl_mutual_auth_enabled: false
+      sasl_protocol: kerberos
+
+    kafka_connect_replicator_producer_bootstrap_servers: sr-ksql01:9092
+    kafka_connect_replicator_producer_kerberos_principal: "replicator@KAFKA.SECURE"
+    kafka_connect_replicator_producer_kerberos_keytab_path: "/home/confluent/keytabs/replicator.keytab"
+    kafka_connect_replicator_producer_custom_properties:
+      max.request.size: 20971520
+
+    kafka_connect_replicator_monitoring_interceptor_listener:
+      ssl_enabled: false
+      ssl_mutual_auth_enabled: false
+      sasl_protocol: kerberos
+
+    kafka_connect_replicator_monitoring_interceptor_bootstrap_servers: sr-ksql01:9092
+    kafka_connect_replicator_monitoring_interceptor_kerberos_principal: "replicator@KAFKA.SECURE"
+    kafka_connect_replicator_monitoring_interceptor_kerberos_keytab_path: "/home/confluent/keytabs/replicator.keytab"
+
+  hosts:
+    control01:
+    sr-ksql01: 
+
+control_center:
+  vars:
+  hosts:
+    control01:
+      control_center_kerberos_keytab_path: /home/confluent/keytabs/controlcenter.service.keytab
+      control_center_kerberos_principal: controlcenter/control01@KAFKA.SECURE 
+      control_center_custom_properties:
+        confluent.controlcenter.id: dc2
