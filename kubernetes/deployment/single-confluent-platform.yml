@@ -1,0 +1,180 @@
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: Zookeeper
+metadata:
+  name: zookeeper
+  namespace: confluent
+spec:
+  replicas: 1
+  oneReplicaPerNode: true
+  logVolumeCapacity: 2Gi
+  dataVolumeCapacity: 2Gi
+  podTemplate: 
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "200m" 
+      limits:
+        memory: "512Mi"
+        cpu: "250m" 
+  image:
+    application: confluentinc/cp-zookeeper:7.5.2
+    init: confluentinc/confluent-init-container:2.7.2
+  configOverrides:
+    server: 
+      - 4lw.commands.whitelist=mntr,ruok
+    jvm: 
+      - "-Dzookeeper"
+      - "-XX:+UseContainerSupport"
+      - "---Xmx64M"
+      - "---Xms64M"
+      - "-XX:MaxRAMPercentage=50.0"
+  storageClass:
+    name: local-path
+  externalAccess:
+    type: nodePort
+    nodePort:
+      nodePortOffset: 31181
+      host: data01.young.com
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: Kafka
+metadata: 
+  name: kafka
+  namespace: confluent
+spec:
+  replicas: 1
+  oneReplicaPerNode: true
+  dataVolumeCapacity: 4Gi
+  podTemplate:
+    resources:
+      requests:
+        memory: "1Gi"
+        cpu: "250m"
+      limits:
+        memory: "2Gi"
+        cpu: "500m"
+  image:
+    application: confluentinc/cp-server:7.5.2
+    init: confluentinc/confluent-init-container:2.7.2
+  configOverrides: 
+    server: 
+      - auto.create.topics.enable=true
+      - log.retention.hours=6
+    jvm: 
+      - "-DKafka"
+      - "-XX:+UseContainerSupport"
+      - "---Xmx1G"
+      - "---Xms1G"
+      - "-XX:MaxRAMPercentage=50.0"
+  metricReporter:
+    enabled: true
+  dependencies:
+    zookeeper:
+      endpoint: zookeeper.confluent.svc.cluster.local:2181
+  storageClass:
+    name: local-path
+  listeners: 
+    external: 
+      externalAccess: 
+        type: nodePort
+        nodePort: 
+          nodePortOffset: 31092
+          host: data01.young.com 
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: SchemaRegistry
+metadata:
+  name: schemaregistry
+  namespace: confluent
+spec:
+  replicas: 1
+  image:
+    application: confluentinc/cp-schema-registry:7.5.2
+    init: confluentinc/confluent-init-container:2.7.2
+  configOverrides: 
+    server:
+      - resource.extension.class=io.confluent.kafka.schemaregistry.rulehandler.RuleSetResourceExtension 
+      - kafkastore.topic.replication.factor=1
+  externalAccess:
+    type: nodePort
+    nodePort:
+      nodePortOffset: 31081
+      host: data01.young.com
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: ControlCenter
+metadata:
+  name: controlcenter
+  namespace: confluent
+spec:
+  replicas: 1
+  dataVolumeCapacity: 2Gi
+  image:
+    application: confluentinc/cp-enterprise-control-center:7.5.2
+    init: confluentinc/confluent-init-container:2.7.2
+  configOverrides:
+    server: 
+      - confluent.controlcenter.id=105
+      - confluent.controlcenter.name=cp7-5-2
+      - confluent.controlcenter.internal.topics.replication=1
+      - confluent.metrics.topic.replication=1
+      - confluent.monitoring.interceptor.topic.replication=1
+      - confluent.controlcenter.command.topic.replication=1
+  storageClass:
+    name: local-path
+  dependencies:
+    schemaRegistry:
+      url: http://schemaregistry.confluent.svc.cluster.local:8081
+    connect:
+    - name: connect
+      url: http://connect.confluent.svc.cluster.local:8083
+  externalAccess:
+    type: nodePort
+    nodePort:
+      host: data01.young.com
+      nodePortOffset: 31021
+---
+apiVersion: platform.confluent.io/v1beta1
+kind: Connect
+metadata:
+  name: connect
+  namespace: confluent
+spec:
+  keyConverterType: io.confluent.connect.avro.AvroConverter
+  valueConverterType: io.confluent.connect.avro.AvroConverter
+  replicas: 1
+  image:
+    application: confluentinc/cp-server-connect:7.5.2
+    init: confluentinc/confluent-init-container:2.7.2
+  build:
+    type: onDemand
+    onDemand:
+      plugins:
+        locationType: confluentHub
+        confluentHub:
+          - name: debezium-connector-mysql
+            owner: debezium
+            version: 2.2.1
+          - name: kafka-connect-datagen
+            owner: confluentinc
+            version: 0.6.3
+        url:
+          - name: kafka-connect-jdbc-10-7-4
+            archivePath: https://raw.githubusercontent.com/confluentinc/confluent-kubernetes-examples/abhijeet2096.NewJDBCJarWithMySqlConnector/hybrid/ccloud-JDBC-mysql/confluentinc-kafka-connect-jdbc-10.7.4.zip
+            checksum: d526490393ee586a6f0ab7eddf4aa5bcaef947fbe93bcec1a334846b3ed45b6ca2bbc73b0caa76acec184ede8da69c51ed1402575832fd9014176bc1073ac3bb
+  configOverrides:
+    server:
+      - config.storage.replication.factor=1
+      - offset.storage.replication.factor=1
+      - status.storage.replication.factor=1
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka:9071
+    schemaRegistry:
+      url: http://schemaregistry.confluent.svc.cluster.local:8081
+  externalAccess:
+    type: nodePort
+    nodePort:
+      host: data01.young.com
+      nodePortOffset: 31083

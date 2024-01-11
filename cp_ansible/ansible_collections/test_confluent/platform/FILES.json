@@ -1,0 +1,4996 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.rst",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65d514cc6226497a778f01a6d8a0382db2ee5043a04bf0e5dfbbf4a12a3a10aa",
+   "format": 1
+  },
+  {
+   "name": ".config",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".config/molecule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".config/molecule/config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a9e3d03cdc48ae09433620ae7cb7cac91e04abc428495768b1cf1f6dc743d6f9",
+   "format": 1
+  },
+  {
+   "name": "molecule",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/kraft.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a13f509f0ddcf0dca7ffcd7cb70758eb29394f7290ccc3b83c6bf07d1972145c",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "70cd83ee8f01281aed15a31a2d6b2245ec75eb549ac21a4a966e8608d551ae85",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19d30f93d8b942ba1a8539815b72e057649d8bd8bcb57c331ee0af7401c96389",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "434e23c0306062445b1dd120eb974c7ba9af7024198899fd89f27dc0eaf258bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "363121e19a021a81a9e0a1d04cb917105f7271a73ba491a791aa4ecccfeabcd6",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a536ca2b87120cf6e292d99ea6be1f4c79a5f66d3f23a9772f6f78fcbf8f7960",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-debian10/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "150c8ed1fc665515c4945f71d2e583fcdcff09a935f39e71651caa0b45a3d668",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2261c748329820f8b18916b0661bcd1c29f737d37f76de0dda90fe98aa28079",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbecfcbe80d4c5096c470e9fd0cdac6e0e6aa5b6adc76a25be7a7044734a7a45",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-customcerts-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-customcerts-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f6cb65f38598d14a9dee38563b34b821115d8598e27341796963ee9b616c604",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-customcerts-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21e9d93118f5738376075d09684d8ae0930731d46572195c6de5c77481521bc2",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu2004-java11.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b1e6e0e94153946f29b6f61182c790587a09899b7850afcc7006ae46cd300829",
+   "format": 1
+  },
+  {
+   "name": "molecule/certificates.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6e21d030526ece8b4a1f6986e727c50c68a9c0cad9124923024f88e75397e7c",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu-java11.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59e26938f34cb1399c1c1958d4c7a672ba4398ac1b4ba8d135ddcafbde000dce",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel9-java17.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aa1ef5fbe2f24561b23cca453379315bfa78c396736798eb8aaf84cadfcaccec",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1827819335ef2309caaf98cc312e648b6b628770b2099284b9295e791228738",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e25750ed20686d04e7667553d6e9885724550b24c65ed1461cb2a66f6af9942",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ea344d3d109935a3bf6fd955d9be6d89b57673c597825b2f7e4dacaf4786af0",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-mtls-custom-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ee181edf69637b97909c74d59832700d9e565687d70969985b59ef848c681e1",
+   "format": 1
+  },
+  {
+   "name": "molecule/connect-scale-up",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/connect-scale-up/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8141dd6d13dd4d0b911ad3a7a3e8fa465fe25047db2a8f580fe521cf17a847ce",
+   "format": 1
+  },
+  {
+   "name": "molecule/connect-scale-up/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85f8c4383921845472209cc30380621e0929c0722fd68bbe08429cf19178e7b1",
+   "format": 1
+  },
+  {
+   "name": "molecule/connect-scale-up/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4fa7d7ddbf0d4b685c53ddd828101087eae33af4239c1269a6d880728a9775b6",
+   "format": 1
+  },
+  {
+   "name": "molecule/connect-scale-up/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d8cf87d39b5d67de66b365332e52bf17d2e9e64d287bd67ac946a2fa5fee7d57",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel9-java11.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "483f037a26f493c95cce61425a0a97334cfe6617fcc5b165bf555cdf7de5f683",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-scram-custom-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-scram-custom-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00f4192826de05c452f011589cf57add750bff7d5ae07a2cd3bef64d782439d6",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-scram-custom-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df10c48747dc64b1ae740e033d5b1aed234c025836770cdae2cbb50953886274",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-scram-custom-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4cfcb5ecfb0f9dfc86b3907b82c13f067640eb8231f347b4da5e19b24d73da23",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian-java8.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06a526e534a09c0493416aaab47b3efcc89edf9be3a2307728a5ffacb98be48e",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel-java11.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6ab2d9008092b273accdc5597e4623d2921f4030767c72d12e6b982acf90291",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java8-ubuntu",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java8-ubuntu/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0035430b0f51500de2ff15a1ae6a37cabae5f83234cd734b5727fd43be3e451f",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java8-ubuntu/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "215ad200bb2d9ba1db2905f62daa5928a18bd31c659d3f1c0e756f4bf7d103da",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-customcerts-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-customcerts-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04042ecb9e04cadb74be72cca3a8d4e7eeabd615a888055f5cc59eef971c19af",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-customcerts-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8b9ba875a9c5ee12852dbf38b68281723d4c86b66b418046041243aba4183bd",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc5530295f242dc1ea00ceed2bb2d1dcd22bf680365147d5ebf03c9d5cf5412a",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ac568d14a339104d9422cf110398919cacc0d0ce0efb44891ed80d11f242a90",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-plain-custom-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-plain-custom-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1079bc9af46af63873776581d2ec9e7db440def14c622e2363076b09f5be3638",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-plain-custom-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91aa4113cdff9a1080c60b731d16450abaa4c473e56785a5fc8fe5fbf7e1c715",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-plain-custom-rhel-fips/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a2e6a1bf769fc0481ef02919c9d7456cacb2b0d6bcccd58394eed1fe9dc5d93",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-plain-custom-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "26e1a5d64363e5fc35eac4fabc2b97f71691d72a75c57045178d7ff22eff89ba",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-tls-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-tls-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8432ac033cc36f0b9e288624fbd2fdbd2f5d739e3e3f115f01e61293826420c8",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-tls-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "caa4aa7c14ea32727e17aae6a154fb40a1a7cd9eef55ba91dcadebe94ce436f6",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian10.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2ffb8151719425385439851ecd243267c1a3bb7ba472da94fade8c8d69381d67",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04a90f39106cb882d0a10652eaf1d2a9b05259c752e1cde0722ff8c0e65384b4",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c410e4e12d2260996b58355d886c23dc3c50756c9a0ab9b428888c802c2779d",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b30b058aae60ec18452dafc35d179086674f524eeb819ddf09041e9b9f23aa98",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4fe869c4fcb5e7526621ebed83471b5ade23bcf909bb2d21dd16425a50815f08",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "434e23c0306062445b1dd120eb974c7ba9af7024198899fd89f27dc0eaf258bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "256fcf52b515083382734d6fd0be66af0525fa20b10c35c8207218b7502e6205",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a84884e7bc00b738bf5532e3f71f815f20e5db5c9fefad7245012352141282d",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-mtls-scram-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e12fa14c1af197248eefbab055f9c6aa760cd8e1d6934065c0948d153dde2dc",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel8",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel8/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6de2787ccec455e741a3ff1e6d96aa80051b135cdf3a3b406adc725c4ed68d54",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel8/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c8f764a16633d553c13e7302db722585df0ffff9e936d36a604fcdd611695d8",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel8/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f69af4a1b82874141949ec7c10bfb26eb279e0697c809c4760ab778644b812f",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-kerberos-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-kerberos-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4de3453b81acbc3eb3078327f3cc7fe0ee8fb767e885c94f21527571f637027b",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-kerberos-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-kerberos-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e2a8bb521799d21b22d71abb7284df598e113368579b2fc72d296d8c6291809e",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel9-tar.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38a32f95c4e9aca0964da7d74e83712f6fc478e900e9426d496396936322e54f",
+   "format": 1
+  },
+  {
+   "name": "molecule/ccloud",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/ccloud/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ded8e160bd1ac0703ce675a174d912c3b4a17d2e89f5db57bd8a65bca3656bf5",
+   "format": 1
+  },
+  {
+   "name": "molecule/ccloud/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7f0944372b26ba97336062c09277bab551b0e70d0150194d391777a73237e7cf",
+   "format": 1
+  },
+  {
+   "name": "molecule/ccloud/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "908e0a6d0095633b06176cbfcf080f1c9764d53caf8e1b9a8181f0849e441587",
+   "format": 1
+  },
+  {
+   "name": "molecule/ccloud/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5cb2c8a071933d85976ab2f18e106e63d91fd65c6d57ebdf262a41a1a4d11dfe",
+   "format": 1
+  },
+  {
+   "name": "molecule/confluent-kafka-kerberos-customcerts-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/confluent-kafka-kerberos-customcerts-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5bdc9fa120e3b07f5421901f173cc44d316e59db3f3930562c178858f2c90ed8",
+   "format": 1
+  },
+  {
+   "name": "molecule/confluent-kafka-kerberos-customcerts-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01c93436b524ffe6cf4d50a285ac58aff814d76d3a7609d61e22747cbc108c20",
+   "format": 1
+  },
+  {
+   "name": "molecule/confluent-kafka-kerberos-customcerts-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/confluent-kafka-kerberos-customcerts-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c7123ca71971cf26e0ba6453edb745546dc5fd9287509ab213d8e806bf1f3cae",
+   "format": 1
+  },
+  {
+   "name": "molecule/multi-ksql-connect-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/multi-ksql-connect-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2377a495330892e591c00d873beb64d482f1858509df10f81220dec0d789b760",
+   "format": 1
+  },
+  {
+   "name": "molecule/multi-ksql-connect-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc6f4cbce86dcc31d34c9bf1e3671fa351b6a908040a4719b4abf08f58fdabac",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-plain-provided-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-plain-provided-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "113bddddb82eb9671353d9b9312fcccf9f224ef357757f2ee57d480d6a211600",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-plain-provided-debian/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df10c48747dc64b1ae740e033d5b1aed234c025836770cdae2cbb50953886274",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-plain-provided-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cd4ee74a770f00ccff478db2756e2f7301f5e82553cdf667e5c3f13d96924a0e",
+   "format": 1
+  },
+  {
+   "name": "molecule/provided-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/provided-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "554613c18366bfb62ea9a7c9a762c638f2645a0580e6376ffb515695a69ca00a",
+   "format": 1
+  },
+  {
+   "name": "molecule/provided-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06d11e241f94614e8d0a3105b13197765c51da8f494b586183575cdf5866ba5c",
+   "format": 1
+  },
+  {
+   "name": "molecule/provided-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce85e3bbb564bb8a11a40b54c6425cd064e9e73591704d2468c230122407648c",
+   "format": 1
+  },
+  {
+   "name": "molecule/scram-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/scram-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "70de2eb2b621a8f0c3e87194e83579d35a67a5dbb02263ee0466f375bdd3bb99",
+   "format": 1
+  },
+  {
+   "name": "molecule/scram-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1c28863ffffbf446e80c3ab8b7a66be6bd68910190de46c404dfc86380c0ebed",
+   "format": 1
+  },
+  {
+   "name": "molecule/custom-user-plaintext-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/custom-user-plaintext-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44c0939069b90f30e5b9f895bb57c0e6fbe4831e3b6ed94729b0849e67099fd2",
+   "format": 1
+  },
+  {
+   "name": "molecule/custom-user-plaintext-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "559e0d7489ee718e43ab05149909eaf64026c9daf8e8f2e37fed371a927393db",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8449c520e725fb8b0aa760ce7de85628caa25cba691c39d9c5869151d79e2d57",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d6ab2d9008092b273accdc5597e4623d2921f4030767c72d12e6b982acf90291",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel7-java17.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "518c6a3c75e874b1ef1c3ea7c49c71f6866a65c9ed125602ba1e34fdd861adc0",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a62e28e6af384d5723aaa4c05889dd975c9c4a49d9559a70c4e086108441fa2",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-debian/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e25750ed20686d04e7667553d6e9885724550b24c65ed1461cb2a66f6af9942",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-debian/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-kerberos-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ba247f2995201e6875751021e558e9f4f4a6624b6805f15870263847b4eeb19",
+   "format": 1
+  },
+  {
+   "name": "molecule/broker-scale-up",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/broker-scale-up/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8247ebb596c7563bd449039c79ec36e78dbd7ecc74dfb1b3a247f24b9a1c766d",
+   "format": 1
+  },
+  {
+   "name": "molecule/broker-scale-up/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85f8c4383921845472209cc30380621e0929c0722fd68bbe08429cf19178e7b1",
+   "format": 1
+  },
+  {
+   "name": "molecule/broker-scale-up/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea2cf955c770e62d857055f659c4b27b34128d2e755fb11a01b8642de465a632",
+   "format": 1
+  },
+  {
+   "name": "molecule/broker-scale-up/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d2bd5bd4083f1bee2aa99f62c05a6ca2973ac474a9793735b60dd0c3a744a716",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel-java17.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "396d8f7c039c06bc89ba42e912ee1ca31283740a9b68bfa42a2824ad3632879c",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e35cf837dad93748545a015423c579de9ae8e29047759b1e3058bf20655ed2f",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19d30f93d8b942ba1a8539815b72e057649d8bd8bcb57c331ee0af7401c96389",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "434e23c0306062445b1dd120eb974c7ba9af7024198899fd89f27dc0eaf258bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "363121e19a021a81a9e0a1d04cb917105f7271a73ba491a791aa4ecccfeabcd6",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a536ca2b87120cf6e292d99ea6be1f4c79a5f66d3f23a9772f6f78fcbf8f7960",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-ubuntu2004/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5372d3962a68126d9a9df6892406c83baebb1ae08036f758c70eab968a57c11",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kerberos-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kerberos-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "471ef83b7be17f6350de0215d4fe0630605272337823521dfec9a0e5343c65ae",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kerberos-debian/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a80b7f7d504551c42cf3b8668ab9821c5545c73445630d0be3d673100ad931f",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kerberos-debian/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kerberos-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e77b3d35946f6d916add224bff6b1694f333091d9dee58baa02f91bfd544a76c",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19b5ae5965e410468f0a6685a244818ceafe3b650ee41b74ad15bcafca38e7e1",
+   "format": 1
+  },
+  {
+   "name": "molecule/collections_converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc063a10a41071c8bd9a669367c783f25abecbbce2d3a199e6becf8e9193534c",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1d1e208f390d4e43cbd1d6898bf6d394038fd7ad2de5a5016f4adbc8b8e74a11",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "19d30f93d8b942ba1a8539815b72e057649d8bd8bcb57c331ee0af7401c96389",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "434e23c0306062445b1dd120eb974c7ba9af7024198899fd89f27dc0eaf258bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "363121e19a021a81a9e0a1d04cb917105f7271a73ba491a791aa4ecccfeabcd6",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10856fe0f0eea62b669f095d73d47c845dd00938391cd8792b5121574f7910d5",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-kafka-connect-replicator-kerberos-mtls-custom-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b1091994615a4db8f068df6d8cfe78ef8e4d68d8442c38b77aead2369e39d6e6",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu2004-archive.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71708053287665b57df870fb6669545583e465b07c200aab26e76de284aca6a2",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2331e99072ccf281578ff9d393aa446f612ae4fe0f54547741c665d6dd7bee5f",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "549e7ece83f449f1e24b5acb4c597a89a421a3dd5a527e51e174f9f59de805d4",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-tar.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1be40d2704dc1e9427abaf156cd0267615b202fa9d3e5a36ea9bf888f93275b3",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-scram-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-scram-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0cfa5cef69172941a7cac1ebe95405cae1a4a7991ba1afea28150bd30cdfc8d",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-scram-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d3b27be0ee52caaef9d4f6bfba7cd3cb72f0a4f3c5016f60c70c33c6dc73c567",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-scram-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3da7d7e9e6b19774a2b15046bba88d23bdf0586a96a1534b4111944cc4413045",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a9e32987c5926d5fd107953d340ea3ff8e46e63c75914e8315785695306cf1bd",
+   "format": 1
+  },
+  {
+   "name": "molecule/cp-kafka-plain-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/cp-kafka-plain-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b19dd3dad5c08c68b9a46c8558e8fc09018b255e4ca16a63a6ee4083ded25aac",
+   "format": 1
+  },
+  {
+   "name": "molecule/cp-kafka-plain-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16f95802968143b5a4ffd8722dd23e81152b95e636bbad5db917faf4bfc0f3dd",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian-archive.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c977545c90e73cd627caaeace879d2831831b85ab5cb481712c3fe80a75a3bf3",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a1dc14a206113f83abeffe94b7f5f0447df817581acf35c4fae7735e64dabed",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b6d87c6fd98613e337b8e1c6e6786de11cfd8d7a6931d8e3c73f01e6523fdeb",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7e583e4068526d48d682ab34c27a1cc49a7a76dd0110d85b7b65cd24c90a23fe",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cb29b5b51253629ee864f0ee2437af49c27054468ad662093b3df4ade3843bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-java11-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be284c244fe6adc06e8bbd10a983635a5233657746742e610b8e130710663d9a",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel9-java8.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "072047b465b2c0fd0050c58fa32c2ac0d3aaae2696218f71ed38965d92950ca1",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-rhel-customrepo",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-rhel-customrepo/cleanup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d98361d9b4062216cbce46b03a2d12422e880e5ed92569217cc1ae6db3f5a660",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-rhel-customrepo/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3814e060ed3d7c8211dfb410e9698d09dd10aa8ee3ee8791732f4b84fb4cca0a",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-rhel-customrepo/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad57f6252d096f767e1404337384b3c5fb21e782d58c3ebfd47878ba89eb3e84",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-rhel-customrepo/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78a9bc7e1e2ab7ed1e783324dcd6e170edb5f033d969696e1b6426af71ceb92a",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian10-archive.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e55817c3e9a3e09bca607a0e202cf194e61053a67c5ef231aaa17b25130650b",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "03fa3201dcca18e54304fa82e9664fa44ba6f5aab83f5266985531dcaa31cc9b",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e25750ed20686d04e7667553d6e9885724550b24c65ed1461cb2a66f6af9942",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ea344d3d109935a3bf6fd955d9be6d89b57673c597825b2f7e4dacaf4786af0",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-kerberos-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6f4091df61951552a1af6bd15ecc845a60ed6de0f60332efdc430ee077f23e6",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c198b6fa65ed94cf1a8b34f356488014d42ef813e6db8a98e2aeeaa1c103c23",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "629ed22cbd1413ed3fc94c4926f3e5cde6e6ec7e4bbe3fbdd7f11f858f325f22",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2a699739e5ea5d9696c4812e2bf8265dc597e7af784cf8dbdd731b1cebb7134",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f33a15f4e0cfb5d63b8a57e32a702845a88b9055cb422b32fcf15818965a7ae",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "438115d9c9b663a34ed8be97c013f31585e4703ef3a026caad5ef81bb8bc76b1",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-rhel-base.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f71f29624931c776b4c154efeb8308d8d0dd13dd8384c226fe1abf879fd156dd",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-debian-java11.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a18f177a9c8a4ef2e1f50b2452223c524d93ef5a440d52d0bc50350762a5f949",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu-java8.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22cf8695db0fae6444645f11277a9d9ea176e9e912a2bea9b53784671fd179a6",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-community-plaintext-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-community-plaintext-rhel/cleanup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ff0a2a88a0992001f81d84638f1d91e218d84c1bef47a461d43b8300ddab1f67",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-community-plaintext-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ebb28bde9f8875f889f80182b46de0e10505486e4a066334f7811a0b1caca96",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-community-plaintext-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b730e1324f4b7b0e79754706df04a0cfd546aba83b73f875a38866160d9a91f",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-community-plaintext-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79df4a84268471914d6f1f4215011dff573bf49ab4ae5445729fd68562d30166",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-provided-ubuntu",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-provided-ubuntu/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ba8a02fbe7a4a90cb86bf4ec4cf0e63bcec87debcf0831e324345bb22c4e3f2",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-provided-ubuntu/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df10c48747dc64b1ae740e033d5b1aed234c025836770cdae2cbb50953886274",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mtls-provided-ubuntu/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8439770657b404d4a1be2ed3a5bd110523194070733b5743daeb16e7b4b7adfd",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01be64e11b693c3997deceecf02be71390b362cb93fc7e9cfee970b68cbcb33f",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91c80642cc97c4522e6ed63230f31074669ffb36e86adf7ae8df1a45c288bbbd",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "434e23c0306062445b1dd120eb974c7ba9af7024198899fd89f27dc0eaf258bb",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b4133cc48def1e836398b0d48027a4e6760d9f4b015ac87942f2ed9d467db7f0",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "28e69f029769eb3b3c6ef389764876debc811a8bef9423a8b7ce04083ed6be71",
+   "format": 1
+  },
+  {
+   "name": "molecule/kafka-connect-replicator-plain-kerberos-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "87359466546a763b5e81ade30192c59275a0113057701dc36f207c155e381a31",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1330db58e66e89811873a99bc5e5b91f1d26c32ab233e5c3af88d9404e535180",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c3a6b6bf6db28294e87540467ee265422d1f5ac2e75269e47eafc5c4acef703d",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-rhel-fips/rules.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b00b6bc2ab43e7ad10666507cd8950f8f6a737d85263b8e152f563741456672",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-basic-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-basic-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "388139d5938c913abe917e3d70a9301fd5e019c290e0651cc58ef572717412d7",
+   "format": 1
+  },
+  {
+   "name": "molecule/plaintext-basic-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "798c49c9dc90b7c2a1103939c5290868973c12dab674d88fbfaa2c1c3f1cd0d5",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25c30f9d122e8548b8cdce056e3b70e47c61efbea0833fad16f5ce83488d686f",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91aa4113cdff9a1080c60b731d16450abaa4c473e56785a5fc8fe5fbf7e1c715",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-rhel-fips/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a2e6a1bf769fc0481ef02919c9d7456cacb2b0d6bcccd58394eed1fe9dc5d93",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-custom-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab5c62edf4f72697fe4e7dd28671bc395af70945043f274abeaeaa197a3da353",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu-acl",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu-acl/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d7c6cd235126a1baba1d9ce1337e7ab54bd35ae467183337f4b6010244a7d1cc",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-ubuntu-acl/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "97bf3dec9726f6b8f4d617040af81451ff141009e1e5433c7f4630f6eae1c736",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu-archive.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "779d7e85832cc0d6b27163d2d8859a6c46ee22339e18b3f84730039d1ba0b271",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-scram-custom-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-scram-custom-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "816c7de0abac336b199e44b4e07c236b5d5e8d8694658892c455a0e0a0ce6c36",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-scram-custom-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "91aa4113cdff9a1080c60b731d16450abaa4c473e56785a5fc8fe5fbf7e1c715",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-scram-custom-rhel/certificate-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a2e6a1bf769fc0481ef02919c9d7456cacb2b0d6bcccd58394eed1fe9dc5d93",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-scram-custom-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83c57e409e844929fe43ad2e77d2acd401382a455a7cec3bab382f99170dce25",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8265315b4339db9ded9d5755239f605cc1db6bd4d989fd53c8e507bbcbb491f5",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "141a0c3140fc8446f66983bf5e559746671d31aa56f358a65214f76b292eaec2",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-mtls-secrets-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-mtls-secrets-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ab8980efeeb54dd19de784e76e2301adcf186ee874385826012ed7008fccd94a",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-digest-mtls-secrets-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b24bf1297f098c82db82a61c7178db5a26c60e58236337f45b4c4e1eb47b94e0",
+   "format": 1
+  },
+  {
+   "name": "molecule/ksql-scale-up",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/ksql-scale-up/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f58f46fc2f1a96f79cb5f042e179f3a9a6a6af006bab7e1ceabdd6ab6e8093d",
+   "format": 1
+  },
+  {
+   "name": "molecule/ksql-scale-up/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85f8c4383921845472209cc30380621e0929c0722fd68bbe08429cf19178e7b1",
+   "format": 1
+  },
+  {
+   "name": "molecule/ksql-scale-up/converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b584aba8f497e700d651b7b29fd524137b16b13fdfa09428c9074fe776e46c02",
+   "format": 1
+  },
+  {
+   "name": "molecule/ksql-scale-up/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbf41731a1561e0c57c9331c5fa176c01fde2cb9b6e567d6d7b5984a5eac17a5",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-existing-keystore-truststore-ubuntu",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-existing-keystore-truststore-ubuntu/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06c67384efba97c157e717d3e855a7730cf187a314b9e340e10538ae63278c0e",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-existing-keystore-truststore-ubuntu/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9448de662068bf355b71d6cbe882edcf28e543c473cda84f5aa4544704f40445",
+   "format": 1
+  },
+  {
+   "name": "molecule/rbac-mds-mtls-existing-keystore-truststore-ubuntu/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56960c37a9e757ee10e2e39d6adffb3ee6d40939e13182e6eb645e72bebb6b97",
+   "format": 1
+  },
+  {
+   "name": "molecule/ldap.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61b4132d35f213ff7bdf99e3f30ba1872c84dea780e7c33b676eb299eaed9dd9",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c337ce2171108bff468b91b96dc74e38c2d13d446541c486b39b3fa41a630698",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c0e09d5d8acf5e2051e7e036ea702b57f07062824b417ff08e6f672dc7204c1",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian10",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian10/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3b67c440ca652eb6f1fc7aee761f987939e1e8711e2408e9cc4c1f6df3e7a4e1",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-debian10/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7d61b3eb1bda95ac2fde743dce5eac68ee7729e88f89543e47ba0b04a9df9c47",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc3c0d59710f2dafc41fa2d84126aebccf1b4294ba17f15dd80331b4cb9acad8",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/create_ca_bundle.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb31dd27e616608cecd547d25cbd1d6b8481030282682cc35070610cd40c23cf",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/security.properties",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c1ed68ad32ff5c6a0d873f6fadf402e41d97582fab601535fa08ee73e2fae8e1",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05d855217a2c3b48ea287bb05f4fdcae688a4b1088380dc7bd98b3e3abac98eb",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/ca1-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c51ab47d8b8749a6bf30c832133001d9349205c9a6546363720810d427c068c",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/ca2-hosts",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dcedd822376d4ef9f77025a8527bdf5a9404cdcf63335ae9e9d96acb9e7fa086",
+   "format": 1
+  },
+  {
+   "name": "molecule/mtls-custombundle-rhel-fips/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f99b8631c980cf8041afcf8a0ad594d89f90d88bb3da14452a498e7f03ebd201",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-mtls-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-mtls-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2b7acd3b1595c6191e39146794ebdfab53e078e7e0f6439aed669d082d4e84b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/zookeeper-mtls-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9004316c9ec307f72c15e3c22b0c9cae0129d5e473479b71c01939a71afd0672",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-erp-tls-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-erp-tls-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "262bae1916f5770d35504cf3edc8337584f982f389841e7bba0c5bc5fbcba85d",
+   "format": 1
+  },
+  {
+   "name": "molecule/plain-erp-tls-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb7e7f3126ff21b47ea3ba944c648a2158edfeae05e8b8f1b1a4bf686d47d2ab",
+   "format": 1
+  },
+  {
+   "name": "molecule/multi_rbac_converge.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "55284f158cc8aa7343a86c8efce467b46f06478f6eb690ea0ee63aeb471a5d10",
+   "format": 1
+  },
+  {
+   "name": "molecule/Dockerfile-ubuntu2004.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "149616ef09aeee078d74033cc98448a51cec6707e9afbb63a5a6ec86366d4f55",
+   "format": 1
+  },
+  {
+   "name": "molecule/topic_data_creation.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba5efa4e22356ee959ac35f692924d4d99a7093e4a44c2947fc19cab433f4961",
+   "format": 1
+  },
+  {
+   "name": "molecule/certs-create.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "da92f8be53ed9581c01bacb268b803f322c8d704584551d404e0d303fb1dc6cb",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu2004",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu2004/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7cddc18aa892a1520e6c25c5291d44e5e1abdd785820e161b8877474ce48b355",
+   "format": 1
+  },
+  {
+   "name": "molecule/archive-plain-ubuntu2004/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "549e7ece83f449f1e24b5acb4c597a89a421a3dd5a527e51e174f9f59de805d4",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-customcerts-rhel",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-customcerts-rhel/molecule.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57a9ab0d6b2f23086fe0af09928e98f358626d3e10ff68f7575c13a64a8be5f6",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-customcerts-rhel/prepare.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "01c93436b524ffe6cf4d50a285ac58aff814d76d3a7609d61e22747cbc108c20",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-customcerts-rhel/.gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3baca462ac6d770c7e58bc6a91b11f235ccbd759f09211bbf28b88dfb85c00b7",
+   "format": 1
+  },
+  {
+   "name": "molecule/kerberos-customcerts-rhel/verify.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba0e671d25038ec7aa7aef38e46d571ae498e26e8877b1458b4ff701a7a97987",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6daa0edca47a8056cd10e7c19b447549fb8accbc248cea597ce04b998e4190ae",
+   "format": 1
+  },
+  {
+   "name": ".bumpversion.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "883362c03d917681c3a1f2bc1ee0cd086ac1da9ccc4f84621ec3f37d8ef9f43c",
+   "format": 1
+  },
+  {
+   "name": "docs",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/molecule_doc.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a06b56867f268b8a4e8a604947599fe257c5ad905655dd4aefa5113dbf2de67a",
+   "format": 1
+  },
+  {
+   "name": "docs/VARIABLES.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "411c959659dc7736a3c7d71b2cb7be394a7b3ef48287a779126c23f2a118db8e",
+   "format": 1
+  },
+  {
+   "name": "docs/PULL_REQUEST_TEMPLATE.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05b3eea1f53358c3dede9b0ec73de338fb917cb7e0f9aea8f6dc35d966db42f4",
+   "format": 1
+  },
+  {
+   "name": "docs/HOW_TO_TEST.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1569efa13e39848172771cd85ec878189c337944e40e8f55dc1c310001115578",
+   "format": 1
+  },
+  {
+   "name": "docs/CONTRIBUTING.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "49e841a8e11819a4d7c417c26a30c8a0c71c149fa09ba2fb527b71692f18be64",
+   "format": 1
+  },
+  {
+   "name": "docs/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cc26744a3041b8f7f9bf78e903ea3be25686bc7eb90293898fbfd329e803c71",
+   "format": 1
+  },
+  {
+   "name": "docs/hosts_example.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b31b66c5060f4dafe5f2abc211f87f2bd4cdd38abe55ce93e7e6f2689325f56",
+   "format": 1
+  },
+  {
+   "name": "docs/rules_example.json",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13cfb285009fc174dd79cf6a590a9ada2425dc57677c9ed7667f1edb414aef62",
+   "format": 1
+  },
+  {
+   "name": "docs/doc.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0aa0a492d5d63abff0db6d04671722a4618f312a65ecf64f7f20d2e9a86acaac",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/multi_connect_workers_on_single_node.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d02407cac97d671023a003b59dc739b6f75a378df471932be37f4f4c02df5619",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/fips.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "da46f5e32294f357dfe991c6c426e6bef497a99c3ed58027015ab8a50928ee89",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/mtls_kraft.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31d15f673bdce3a35c81ec55ebcc278e3d67156fb02944dd8fa150c2e248171b",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/ccloud.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "687dcea6abd5e837e1be483844fb0ec85bfb2cc14b73d2244d2820763772376b",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/rbac_kerberos_custom_certs_example.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a0e189177580429004175bd7990196f1e50f5f2be8010e28de5e9d9720e7e2ea",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/ccloud_self_managed_schema_registry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e031d21d7e8faaab833930f84698fff03f3445a955c8ab76c7e6fc23d093fab",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/rbac_centralized_mds_kerberos_custom_certs_example.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59b21e32c4ca15db3f9194298431befce7cdca3997dcc177e50036026cdba09e",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/client_listener_for_ldap_users.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5c8d5cecbcf95c4d5fe711abd6d80908abe6dbf68a8fcbbd7a35c1364b71fcf",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/rbac_sso_c3.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1ac0bd5c9bf2f26e2972ad3b141a7f27012bdd3824f99267a114b64220ba96cc",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/kafka_connect_replicator_rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2702ed212da4780e65754edefd5190c115962af013679597b2ef89091ae4dcf9",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/rbac_mutiple_ksql.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75e8617967e002d4e29c9c183fd292dbc11d1ee341d0e113e5f093519ae93d87",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/non_root_deployment.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ad90ab5f72945fa572de810ad17f8163528bee66c0a8496de08200d392a7a261",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/single_dev_node.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "528919505c87ca95a0b6ea4a802e41ae5838d1e23578273b452c7aac69c7f88a",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/kafka_connect_replicator.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2d2ff22d224f712e101f14ab62f55fdb670883340ba28239d9519c92207d712a",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/sasl_ssl_kraft.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b7b1f5139526dd9c1d4d16909801eeca22f5a1ba2435cfc902463aed23531428",
+   "format": 1
+  },
+  {
+   "name": "docs/sample_inventories/kerberos_kraft.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "33038ed872c03b84d68670f709d8e94bf1bf652607c53b8939ce8829c0d3e01a",
+   "format": 1
+  },
+  {
+   "name": "docs/TAGS.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "291ef3dec7508b7f828575e1f39fb3308c25e324771913bbdc23ad6705d4aed9",
+   "format": 1
+  },
+  {
+   "name": "docs/DEVELOPMENT_GUIDE.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "15c3cd802c5ce11b9b42e3fc98af6525cbab5be866a696f558c67a788db4e350",
+   "format": 1
+  },
+  {
+   "name": "docs/MOLECULE_SCENARIOS.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0fcc83b666571cbc61a30c5c4bbe3259c9e051a12fd4c70c5dd5160bbe049a2f",
+   "format": 1
+  },
+  {
+   "name": "LICENSE.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+   "format": 1
+  },
+  {
+   "name": "Jenkinsfile",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "251db90f89c72ac25458ceff5c56a2d03fce064503091a52521476d26a35157c",
+   "format": 1
+  },
+  {
+   "name": ".bumpversion-ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ec2afe851001daf826feb47f02f6483461d745b47c5bf2a9fbbbb63fba93846",
+   "format": 1
+  },
+  {
+   "name": "test_roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks/tls_custom_certs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "312335a0d40984c1fa5b3e2bfc965b137fbdf26b610417f32b15f432cf8a37c0",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks/create_user.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ec1694fed367a8309f72df9c419a9200a2eb3ef8ecb5feeaad1c7289f82b600a",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks/tls_self_signed.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc700699630ad485558963001f41decfc8c7358c7cf840260b622a6ca0a80225",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "284d26061608536bf104a45b73ff7488db7b3a0b3da49e32e02cde7b569bfda4",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/tasks/tls.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "07e97429663ba9950bdff5184fc840f1a159577f665122a2c8bba58b17e0cfd1",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/templates/user.ldif.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a7720f8c5cc74fde8ad2da74ec3722eca44e69639a66dc8ef0c80b0a5da7331b",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/templates/certs.ldif.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bbd724c2b3de124c75d72b48bbf18655948ce7723c01b7e3894f93f663791eaf",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/templates/db.ldif.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b537291da29aac00ed5013e58cdd0ad835fbcd4509ae83ca4ef9b5f65389c09a",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/templates/base.ldif.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e0e244e2ad8a361ff0549351084aeb5e5dcfc441ec48b9c4a8d664911fa42a04",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "db66dd43f2b0903a5b416acccac80db1c785ffd961a6a482c8fa2491e931a571",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c182986fd3bec7df4c412dc2e41e815fc4b00e42289078095cdbf0a9b0d02364",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.ldap/files/slapd",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68955c1976b34e335e312f6de25e9ff593d91308485e9951b6a08d50db85567f",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67f794115e1fa2e078e72575ca189d3e0099ebf9043d53f9f7b19e4a1e99f322",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_log4j.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2704354becc871c2956e3c363c70319c2bc3dbaafc5324f0487df7cf0f4e51bb",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_ownership.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ac4bcad53e1fe15d312c9c18e04f11c9e153c0859c42c2e5a69e5d0bdff0bee",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_connector.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b717a0703a0283e76377b926500df728d75e870c235c584f640aeb5b898e26c4",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_group.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a74e1b7d64401524c2defaaa93d4c7aedba41891e21d2aeff8ba44c682f34621",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_user.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "29d26b44c3fee17927f21fd0424d73906fc7afa3c344b8fec84620363c5db254",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_tls_version.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa3a32db49a7c07c659a7a748b1fe71e22a6bbb3fb70df0c57f40ce60b3143f4",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test/tasks/check_property.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f2b2509ca8ec95f02018ad5e15d9d4b0c5832fc575d7008dea3ae86076b2480",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/tasks/ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "efa73179324c9f4b66c187a692f10e0c5da66f3e9770c5b23137f725a7158372",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/tasks/redhat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c464d4bcabef724402e8914fa475c481dc746ff213373b0c04b708baaa232900",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "669416ac88664bece3d03910818d83a07e98f31a36be07c67f7cc50510b2ed4e",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "490eb65deefd8627228f2e1055dd7be756431b1456cb06fb50017445e3082a4e",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/templates/krb5.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c63196ec1fbc5de4fdf2d75d257b55645fc80150c0fb1c482a1b01cdcf3b8b5b",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/templates/kdc.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "392fc3ba90fc3bb63fbc8eaac55482a55996359e5948c63191bee779ad875f6b",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/templates/kadm5.acl.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78bd8eb7c4ace60fbbd433a57279cbcfd562c312e0f32ce0b981da8509190c58",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65e695306f2406d120bc5139a9f13691a7e2fd31c26da54ba6deed3d799c8bfb",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5f7ad0e13476bda61dff211a1609cbb8d581e772aa4d7ae361c93f7b93b6ea8",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6b0a72d3e17ef07e5dc864cd639bf6aff522a427cf772f57c626b3de04155c27",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/files/create_admin.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c75b85b5e692c669a2d8ad16c3636f05705ea62f279128ff071ca074d4b5fbd7",
+   "format": 1
+  },
+  {
+   "name": "test_roles/confluent.test.kerberos/files/create_db.sh",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfe73592de79e3950147ae7501caf3eccef3069332b396081bb81812ba1f791a",
+   "format": 1
+  },
+  {
+   "name": ".yamllint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7aca830f7d3784264c6734bdf3bb993e7b1b28e571e2322d84074efb28d82d0c",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "980e361d0faba6fb075c16657f3a6714efdff724fbb65cc78f62ba1ef45ed76a",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.12.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5fe957e1165c4cb5ae940d4a4947a4a157189ee70cb2e351af68c1c9b048e99",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.11.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5fe957e1165c4cb5ae940d4a4947a4a157189ee70cb2e351af68c1c9b048e99",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.14.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b77ffb542ffac81200365b193ad342ff612ef58074255aeada867ce78a55b600",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.13.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b77ffb542ffac81200365b193ad342ff612ef58074255aeada867ce78a55b600",
+   "format": 1
+  },
+  {
+   "name": "tests/sanity/ignore-2.9.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5fe957e1165c4cb5ae940d4a4947a4a157189ee70cb2e351af68c1c9b048e99",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/kafka_connectors.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e785e0e8c3fefc682a137fdeffbc62f99c44561bb6370653e5b552eeeb45162c",
+   "format": 1
+  },
+  {
+   "name": "plugins/filter",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/filter/filters.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2545d59096ebcc237aed0e69ba2985d4bd00ea9d996b49d68f3a5a6fb3b2d0eb",
+   "format": 1
+  },
+  {
+   "name": "ansible.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6e928ffe4816b878387110da1717227debb211bfb803835953f33956535da03",
+   "format": 1
+  },
+  {
+   "name": "sonar-project.properties",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "df0456c329458eabf42c2e150dca9ebc1ea01299d1741572702c6969a898816b",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/export_certs_from_keystore_and_truststore.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a79f69df55aa799fda529683f42145187fdaf81d060de55177426bd8f7a9b620",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/manage_keystore_and_truststore.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67ae42b02c7e519dec2727ac7c5b872ad5b476793744edce3fae5f2fce63fe0c",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/self_signed_certs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "189d46906cc2fe6bd6948fa1debbdba91b2c76e484031d7300cb575afcd79e3a",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/create_keystores_from_certs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce9ea111fc29583aa122805fc9d2b4c81fe28eddc5f979c353e1dcb2820783a7",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/import_ca_chain.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5d34af5fd98580c1f5724cb0b58ca9a0da7858a2ada2b89eae84274d4d666c73",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/provided_keystore_and_truststore.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e85f4dacd8c55bc684946bbef5d5a244fa24bd902c61323365d8b48573be9df9",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43311d6fab9be5a9f759a33fad160033a82357dbace0e292ae7fbb5918c153b2",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/tasks/custom_certs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bde1b1a4061632fc59a8b4cf3cd3311db91c2c01d199bb001d242902539ef12f",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/templates/openssl-san.cnf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c94d497ec894879fdee5d1dc23a9c91608f36666e3ff87b95ba6a8af58c99d3b",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "360cd98e664011ecbb443a51a8321f5999a9f765e935890e625a2a75bdb2b1d6",
+   "format": 1
+  },
+  {
+   "name": "roles/ssl/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44393ff6eecd7b519474634b1b130c888f46eaec2786410764cfb6bce6b27df5",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fe44b56d6e97e7c06562f3920c427d4e9f98118d4ce8eb992f1ee2571df4068c",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks/register_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "75703d8f116dfafbd241435b7c44906331a34b783842a9272c19ed889bc29567",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2adb20894a5747e78eba61f78a46ad16a8f81ff3ca837e659916af3335014523",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d04923ef1410ee7876185dcf3e2a509ae83dd085aef2eabe2853df779de3357e",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "86ff62bb2fab34e09d5ecb04eabeb517684ad8d83004a5347d9269ce87a180f9",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates/schema_registry_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "939c12d121eaee13868dd652281f715a0ec5471d1ab44f1154372ca7acd6476a",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates/jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b5e69f56f0f8c222e0c5ba5a28db4c465c5c0b13e0584eaffd345407cfcd94c",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85dc204f871f98864a2f9500c199b553d8d0bdf6864d46178eece26c9980cdf1",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9626390edd864c0140335c7aacb4164ecf33537dfee8389e559c021b78d80a48",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/templates/schema-registry.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc860a74194518241020eee4663e12c15e26a9daea70a8ac49bb39ab968b1cec",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51ddbc733c807f787cd5bd1df6ccb81620212873bb2a81d7b82ce3f4443092a9",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a85b6cdfa35bf5597db57fe330fab519dc1a73522583f17346cc65c7bef15f2",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a4ecd4fd2cab412a9b8c4150f9c0d82dff898d5e545468511218056ede9815c",
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/schema_registry/files/schema_registry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d1306b272e081aaf374e478f8cc7134fd58b049d79a420be768cc7e801ee249",
+   "format": 1
+  },
+  {
+   "name": "roles/common",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/confluent_cli.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b63f2fadb413bdaf0c20539f08b3853a59b5ae88937276fb34383e105f8649d6",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/debian.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2df8b392342b372d974cf16c4a9a12818ed9bdeb59c50ce9e4d16f6c25735435",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/remove_packages.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed47251309fd35dfb61aa4880be9467719bfde8ea97539ab4b6c1d62f64a89da",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/update_log4j.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0e6ca4485c4b61668deb5103b749e221a57b28abdeb5b89e8c221d708d3acd11",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ec82fc1a7c4e2080859c1a53433abe2ae571f1b65845399472a3f611e22ea50",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/rbac_setup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ebf2afd7dbb06026cad57be63732774e46c0679e7944e64fc02fb828c07056ce",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/redhat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "22a1ff7fb4096dfba532c8d7b102340559dbb67018401e730ae8bd0fa11bd0ae",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/fips-redhat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5c219c1dc212f39185c14278390843f58d1bab9d88870068e7730f21971c1ab",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/config_validations.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32d05b817ac6e73ea22625e12544587aad4e2d8b75d4dfd49b650dd85201eb8c",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "105413c3f3e4d5d453b241025e335e2dd6fd82ba95eef02b1b55f4ba84e0b378",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/configure_logredactor.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eb59370753cdfe55d16d6b78611813a494528ed951b8f717e055da7381f919c3",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/copy_files.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "268f359ca28b59644327c927b52175a5d7d405fc37e2bb7c567e598dd6eecbf6",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/custom_java_install.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c2a94282d215a5fadc6a1da58be7a6ef75676f3a565f243d6ae8e76f815b0c9",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/masterkey.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b3d2ad7d4ba8c4c10309a971579a29ebf7aebb3fbdbbe3cd00f4095190960f0",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/secrets_protection.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c6af01e64e8c2724cf68ee7f09fb3ec3cffbe30c51bd7afc5d82222ac41865e",
+   "format": 1
+  },
+  {
+   "name": "roles/common/tasks/fetch_logs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c0e8d5d2fc5e1f3db13560a5f4a3e6d144bba8dd78bebd29ffe52a7d9f7cd1d8",
+   "format": 1
+  },
+  {
+   "name": "roles/common/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/common/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/templates/confluent.repo.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6288b7fd7b5b235669d52c9c12e311bfd706cc9dca6b448cb2358bef0da4f692",
+   "format": 1
+  },
+  {
+   "name": "roles/common/templates/properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0b774aa2455c5d36dce665c35f9e89226070cce8a762594920f27630f0737e8b",
+   "format": 1
+  },
+  {
+   "name": "roles/common/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c6995dd6fc753a985b0f69797ab17f1865b2178699c5157512ddfb0d26661b4",
+   "format": 1
+  },
+  {
+   "name": "roles/common/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fbc7722796408896293467445ed711dc2186cd6a2f4990d7ecf2e2ac26bbec3a",
+   "format": 1
+  },
+  {
+   "name": "roles/common/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/common/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4337c01709aa7bfcf58b1b1a4ed748b94d52d836933786b1b13f0260b0893ce8",
+   "format": 1
+  },
+  {
+   "name": "roles/common/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8bd6bb21009fe0d972d6d985c65a110bdd6b88662fd1fd80f2abfa98a730cc8",
+   "format": 1
+  },
+  {
+   "name": "roles/variables",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/variables/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/variables/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "54f93e91bdc584883aa6e595a64e5fe001fccabc3460e9a264c2785a2da3319d",
+   "format": 1
+  },
+  {
+   "name": "roles/variables/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/variables/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "93d7d509c1ff155a519e4dd98a13366bfe20904e49386a61740b912851a55e6d",
+   "format": 1
+  },
+  {
+   "name": "roles/variables/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f58bd6a313ad43a752d543e0b1a30003cbb5d78da564c54a2722d2024668b264",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3ed9d0f284810ae1e7e69b1df334fa5b8120397cfae37381384c180530fb8330",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b84f29f6efaeffd643a390ab017622a287717d5b60a29f255b76992adc905f2",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "931e631b9784a84345511ac4d97f4ea11a3147ce79e58e9869678734f5ed46e8",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e2acd4d86a32b497c389f9d6d1ab4af34b55c34ff915c211ffff03e86558786a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates/kafka-rest.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a971d38adabeeace74150ad2d5356b186f4530d5e76655186668b4ee397f3ddb",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates/jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c773c99a0a715cc441616a7b65663fa514d4cc30f40b373516c724ecc210947a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates/kafka_rest_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a683381f124b0c9df902c7e0b1abe59248646f3612f7d4562ec6a7e841348017",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f5ed14ec772977a3c5fd573f470fc61da2b28f75c15b306a4b4280d3618b8bd2",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5edb262841b4b4b8844e75d44e92de2d9e7905affa052659b095e957f445445a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f6545f70f4036b43f23e55ce300b76b922826e9a45b49f4c821bdf3cf0ca2a24",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea19809cc6e4729a6f76fde560a65af7fb6b1356931199a52be62473a4f81b12",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7796da14570c08451ed7873b32bca859aba652ac8f1ee351827771bb1c689746",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_rest/files/kafka_rest.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59a9511344ef3194c25331f3ce24f27ed8c8569ed6876afd813a6250581029e2",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1abb373a0923a87fab0bdc62940855ff25997fe1430cf655d73c6389675a66e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/deploy_connectors.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65ed12c3c1212aab031af13ea3cdeb2ac34dc05f574e41e9b9427c7e93c2e945",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/register_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f3f805597759d945ca872c601bb95e7941845920c06ac0ff34b368085b4435c",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1a63ab630dd863bf5ca5d53d189ab16a1a15e74396daa725d5e193ff368c92a0",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa4004896e9c6a8ef0de628642cf7270cf257abd8e010f1b71f17b76f7d88fd9",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/confluent_hub.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "275406c18fd74a24cb102ee258c394080c04227da613e8c5f6c6926d72af3afc",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0ad684ea6589d937670dae928d5e5f280318ce14e9548c954dfc3dd081d530b1",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/tasks/connect_plugins.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4afc788591a19baabb9e8898427334e2403ded62d31d5bb895528e9c0a0f2371",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates/jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "decdef5ed0118346340ddba5bd12cd1a42b4d740564a28796f1bc92461339a5e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25ef5236f4a0d8e1755b010f0ee038059b26099db565a33b3bd09734fc7de19b",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b1b3a1910bcc3d44612d9bf651a404c1c246ff5a81071250332c2d3b9c4884d3",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates/connect-distributed.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8282f87aec28f8e90bdb1985dffa6d0724dd1bcd54de189ecca3d9a2d8651879",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/templates/kafka_connect_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e0700deb1f142b97f0c9ac83b5556c40806da802f901d6a42139433f0dd14b1",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "342fc5d9fcc2e59edc294b13e22c6ed1f3926e500d0cb129294cea7b5e8075f0",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "aef632c0d7f584d2ddb580b456c9b70603266071ab49edaee68d6ac21e1e1887",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d60f982806ceba2ce88d663651398977c333bafde4922568e58746d590819d8a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect/files/kafka_connect.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f412fe2769f9eec8bc8f273f8e5861ac4867b900f87e46c6e4f183e0bda88137",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "39d0dc482eeba6b8088b9248fc976ce1b8847016098aada55d9aac7489a6e186",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/ccloud_certs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d84dc22afbd1424341cfcae56bcb5dcd130a305c697088e01c6bd413e76f682c",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/register_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "03323ea9e29a9e97f628890f57fc26a2a3c3a834fb64f8bc5ba68ccefc490ad9",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d176ade40b5d1ef27af9ff54c123b57a2c054358fdc5bf07629ce4f3a28f845b",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/set_principal.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7ea02774a024f5b6cdb9174a0454597ea92c8338bef789b1f5765c5303f33918",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0fd27f436ed2ecf91a5c74c4f69c9756c3be6708afb994d25f6df474588f0b57",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e955405b770067e6e839efb361e9c4b70241ffc08ef7fc628d36a20fc6c6fc10",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/ksql-server.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "65bc25e0520d1798b96b255967a12d834d89b41403fd4f7718bc737538ead8a1",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0334d2894b9bfad6dc4572d9667fad0f666ac609ed2fcde73c999975c81955e6",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/ksql-server_log4j.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3e60efa79ea86149cb89a280b2ee4fef2ae3ee6b9948e87021331ee827da8046",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/ksql_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b0443362b39b05a5755421b82288e3c622079f2dbfdc7b679948559eb201a45",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ea63126a69f5c8647714d557f88c5e69bf372f2f46a0173a9e9ecac59e3c27f1",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c15cbefc5b3ae3437291fb35846d16402d3f057dc8419aa0d705e2e09e57058",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "61d61a3ed056c8ccf3b862ad6576a451efc3eb90d06da7a983c129a7e26fd392",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed0b1ef52aab612e71716c8700606a111322d8e55979e12f573ef24280719946",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b0c6256e7343465b5f36ed0bd8fe03d69644a176fb9b268e9cbaf2a8e68c6662",
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ksql/files/ksql.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c7e866ed0f0252dfe88c8de1c4664c7b45703c098692cbc2995e0f01ac025ef8",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/get_meta_properties.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "57c082aae235fa4ae4856e0d2fdb27898b47164875945fdbfcd4e48942ef4477",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "414d640a9af41564493b3860e4719c4ecb50926e368b5f24139fed973199c4d4",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/dynamic_groups.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae92906a8abfbeb770ad18077bba2bd05771ca9848070bbc7104333cff6c0f3d",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/set_controller_principal.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b02ff0ce7bd55e5f8a9a4f57d18efe2c162c16ccdaa555a0f0fcc7ed15beff1e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/register_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae855f925650fff3a4dd0e9917b8ebf46de1b776bdbe36b52ddad5c898d291b6",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7a033341c5c974b7f732e1f17de686720b4a5c4c7f4bdad661b4683f8cbb3d8d",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/rbac_rolebindings.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e49c7c31f4ed86e03c5a0a41ea7c3eb2fbbbe19743a368c4d3d929ff5918de21",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/set_principal.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e84c4aa6c49922cdce2928ffe1c5b2fab7e5c9203faac70e5719acb06963cfd",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dc106b2f045d42009f33bcad619859ce2e0c08c969311092d92b56edf9d72735",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "677bf239771e564c8dd604748badd4ddfea289e18dc46a0b754a064dddfcdc1e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/tasks/secrets_protection.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9dbc16b77e7850917ea8af8b82c069cc6748a6a5ab092f466b1e7363a472520d",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/kafka.yml.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f81f412e0822fb53d51bfa496cb9fb0135f062f7d09bb3303010e01027ecb8d6",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/client.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "727870468078ab46c601898bfca97ca1cd58f1564243e10b8d69fe14fcd7e1b6",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/server.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b3c8fcef1b622041268067a7642e73e7268b63e2617e14e22db1adc0d6554afa",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/kafka_server_jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2fcbab8b64f157dbbd171410023bdbb7b5a3deb0215d4ad8750c4d7566a3e236",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05b3f738c5757ee58ff3ea74921aa62debc752895754c44b05e2b0c84f13a5fc",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3a8345d6a411e6ad0687ea55c5e578e200eb1c0e94ae8b8a45f66216635a44db",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/kafka_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6198f4c074715e3471a1e704ff0a159f5f3c69c3a43686f42c5513dcdafc3437",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/templates/zookeeper-tls-client.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a69eddbc2208e03f8c14eb3f50bbdc2132fc9708e6962db7e95d75e4fc9b0366",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eced86c68e72efacb15fc099648258a68b86d2f35b0135096b9fe355cd2572b1",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "812fcb9e6e675ee2f84290443c39d5c648c7e3cbcd7fe95d212d18ad7251f69a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_broker/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd6e7faf970dab90321f15c4e613111a74daf32613e0edb422817e68d55d5196",
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e05584d5a17aac47762ac1a1fa6339e7395482125887e4c6e1f8dc0d89d1b7c",
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/templates/krb5.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e093ebb5fbf9aef7713befa9b6d1f3b082b8a4a5651ff16dbb108de4041e200",
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc80881aa77084852c860d95528da53166e6f63475003b028217786d11e27ab7",
+   "format": 1
+  },
+  {
+   "name": "roles/kerberos/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ce3778974d0833bd5c731edcd9b9626d126a4b2a90435e66b3bf14c73d2043ee",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d3d936c9d68dfac230cb1cdb53b845a0b4176e0ba73b28f6338f53528337bbc8",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/rbac_replicator.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8b44e462cff494333d9747408b7ce29bfb5039db4164281d2d03369f6f6414b",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/rbac_replicator_consumer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "89d2cb3c7638a69161a185ab9d317818701e9df5f0a16ed0ecf831ecf81534b7",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/register_cluster.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "50fb302ed0f85651cb469105ba41f0a9298517eebfec29cb9464641c24c396f2",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8e50aff1fb5da562e44c71cfd267029ab2cdf1451c83fb8f26908a9bee16b5e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/rbac_replicator_producer.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8dced3bb645ffb63628d787ab93e1e5fe8b6dc353bb8d71b92d1593293ef0ee7",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5fab583c42deda11a6d71329ef533a5a6122151b1f08c743fc77d607a744570",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/tasks/rbac_replicator_monitoring.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "023468e05c97ab903aa8a856bfbe3a54eb328e9e2e01eb9d4ea2ddb7164c9636",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator-interceptors.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8bdbf1fc5de51a5bf08d75d66004602f6ddab7d2d5bf93a83be126844a84a310",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0cf10d6d507d44d8b3914fdc7342d08c5601891857ef4b2cb817571baea09201",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator-jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "00e24471f365b66c78035062256e8dd4086659adec067b3011e01321bc39997e",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1441555dc65344a96e8725b6877eddc8832e8d9a0f5f56f167109bc619d7a2fb",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator-consumer.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fcbb9dcacbd056658805ab2178421ebdeec66564c6bddde595bd08372507513a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8de4a4ee77a4967b34135bc8c52c7410c7a01dbee415f19e6e371d3625f5a085",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator-log4j.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "44015d1da1ce7040452d67183bb522463841c54ece434e98a70e04a4086c72fe",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/templates/kafka-connect-replicator-producer.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c4341a0ebbc3e65da0cd6fd5d5fbfea3de929f72d709a4cd3cc7ae5c06dc1da7",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ffd32e920250c8083c38a0f19976bd1fbde2bf5b27814ac05cc5b0be44c394ce",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0aa7b5e584b22c10761ff3c752438c2bedb022b6e46612c8e1d4ad1d5a48b942",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_connect_replicator/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6b0cb90f44327add0eaee0146c92dc89e4173d097b9adb6fb4e0ecc56880801e",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3aa9ce7d2a22d1f848217dbed02c44194af7dd64ffe5199f69527bf77071096c",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0f124b449de63687810787165d0268a99ea9f0c1111f8491c69dab5509013ba5",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c578d3f5b86cbd0516412053f0466dd3c32a6c77979a830d6207d93fcfe9249",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21c587e76fd9a76408252dd181302c345233c43aa93ecfbce6fb3597d8c1b99a",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/templates/jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "175803293471a04183b6e674cdc052ca6f7192b18d789055386431d0b606d88f",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/templates/control-center.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccd3a1276a98cede42d1cb83149c32133be62f0f20ff3c113da72d35d36d7139",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/templates/password.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "487f7093194ab4d9134773b0c35e5f720aa728ed0d3fbcf14b9bc60cd5515534",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc4275c29fb04026c78ef0757b187d02742951460b877f37e8f9fdb1a529fbf7",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ba810b027692b76df6e572cec4568160d3b79d022fb03b757a83e9863eacb1cd",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23e10f88ed355d4d824b970b1b0e64572d13f1726339a504a3aafa43d09c6131",
+   "format": 1
+  },
+  {
+   "name": "roles/control_center/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "58f9f0e8cd03b6f14eed53f212e92a0c4b8109bfcc91fa56e898c1ada0acfc90",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a44c0fcc9c42aeb80db78992f2a134521cb2b8d865a2e2800d12dbdbd2aa27f",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/tasks/dynamic_groups.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f398f36568d30011e66588337851810e5d1686f07c99514820e973ceba6e55e0",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7939e15387036007f06f8243e02dbbb68572bf41ebf5a79aca9f4db2fadf69de",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c75669794599e38fdddb1641ae4885346007af72ea79964ce3caa5939b27b300",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/zookeeper_jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "42342a5fb7d8c3849e9616e3a084ac70d381d82aec66c7fd187399ae4f779784",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/zookeeper.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e8cd56d77282b62797c9ad23b090509640c9a031b958f54091ea6054dacd3f01",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/zookeeper_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "62dd98e0fa5a02fdb0500cdc02240d4e1cee72e2398b36529b85b364afe44681",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d0591350b5c0206a61c81793754ea470b647a795841e0e75dee955478548b63",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/zookeeper_log4j.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8f971cebc427cb4056b3e638274bdc28264356cc025fee90df7cf22261da27bd",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/templates/myid.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2941acb0bc5f4558814e52d4452c6308c8bca9be12867aa7770d126fbbcf8c85",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "935a3fee59241952f69cc4783638163671cb9fd26b2d68a9b63498e42a830fbd",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "24b0466f374e27585cf5c20e76cea454645b110af02ff27ef1b49e3fafb80bea",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6f64c3d63ba17c26f735ddece5a9f8019401c2bfec4eaf869da0cd1f00daeba9",
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/zookeeper/files/zookeeper.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "beb6cc9e1334988e9363d7c65d33572af9935a59a5e38ad266482511dead7e0c",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/get_meta_properties.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b4ed34eded56827e1bbb0f3d6a3e079eaff7780d71bff2625aa754663eb3f9",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/restart_and_wait.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb40db4969c1361690c4590df19436646cd9e72aa9a2d1c43d11cff1e3222b52",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d3f2af64fae683f8d20df185e0f20b2b75f1f41d76f814b956a9f4db7c16cbb",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/set_principal.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "08806c40668f15273c92c28c73c5e6b6457687729dfa73dbedcf9d2c6baca160",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fc538898afd442d838d05d7512df4efec916ae2760070085f4ae69da4d2c3a40",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/rbac.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a43d394674708386420dd649f1b4652121d957639ffeba5ae578e1b509615c7",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/secrets_protection.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "643d2f5b04d291cbe34912c74bbd7c64572defbf5af12e095f0532f9f0356316",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/tasks/create_config.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "979b74c63ee52745f22ee67732bcc94418dbe677161d21f1fc77b7f94b52f615",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fb659add42360f4161e74361f7ffd7ce3f18be4dee58c8a619a5d9c4bf56b10",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/kafka.yml.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38eff5e433387c1fb7463e4a4e5bdde9ac24f3d3488d402a29177eaefbd0184b",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/client.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "59b83a790be1dd30e8c5eebeb00aecf243f6da907b4f43f5c9f1c88c046e4bb2",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/server.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9b1d59e412e7fbac2cff6b466d2e51350e5b2a4c00a0d760cee1eb146e016854",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/kafka_server_jaas.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6bcd47da0596478af0e8352c03aa884688b7366a855d5d445047b6a527b5c48a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/override.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94503b871437bdbeb9c22828b87a16dcdad9db02bd0963012e284bae4339104d",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/templates/kafka_jolokia.properties.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a176a40d2a2cf7de6a0bdc5b1d46c743ef4bf0dc5557f9a907b063e5e9a976b6",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "407cf090544e72fd05b0fb23a41e6a9b505143c445b6828d2257c2b71148c96a",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b68bd19214d2cd4e588ee9668b99b99544af5e0177b28d714119c22e659877be",
+   "format": 1
+  },
+  {
+   "name": "roles/kafka_controller/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b11f012e00e662e61172c80203de5eff6af27f82d2370871e9261dd2b77c876c",
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "87edbda083e5f8f01b54f687b4afab7770fd47f2c98f218b5116e432afbe82b8",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05fce0477bea70f4ccc102420ee3cdb030ec848cf3634b3f21666fda4ebcd1ec",
+   "format": 1
+  },
+  {
+   "name": "discovery",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/main.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e80e5ddeb777cb2c200d7245e0c635dce658964e70aaa15527c0319f73b08f6b",
+   "format": 1
+  },
+  {
+   "name": "discovery/system",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/system/system.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb8be3acacf877f993f28e193a9cf2d2f5deacd382f9216029d8a7eb55b07454",
+   "format": 1
+  },
+  {
+   "name": "discovery/system/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/logging.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "811b1641bca6603ef5e4b775db362ac1d9b753e21460e1bda4136b7cf812be06",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/constants.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "758de3b5efebf71700f03a640a6b67e2345b41cfae6e001523abe8b5591cb879",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/inventory.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11480cc1b205caffe79a379b9ff48d559cfa10cb690c7d52adc443accd2c07a2",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/utils.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "917bdc0f77d4ce45f34b684653917e100f242adfee3fbe99e52cf37306fbcd2a",
+   "format": 1
+  },
+  {
+   "name": "discovery/utils/services.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d12664dda4f81c39767574f4775a2bd5eb552e377390d0b508d8bf0831f49539",
+   "format": 1
+  },
+  {
+   "name": "discovery/service",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/service/kafka_rest.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6fc3d34bcd0b07f64cb958385c4bdde5ddb81553e42809ccdcd945b7321208f3",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/service.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "13b21d2e5cbbffbafe9d537ba7b5fc8194d8111f73d6a4689e61668988a541ad",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/kafka_replicator.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1486dcf3c184026ffff0bb5dca4753c37084025b81adfd786438a9529dc95da6",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/zookeeper.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6371b7963d622258c1b867e940d6255ab079a7c4c66c1500e7085093a1f054d",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/kafka_broker.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4e9c6d4ffd07dac5e05effb23d7188e1ed543bfaf461f6b703d7ee6154dd466c",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7d141e01e773bd842f723559121750272f8b1032f0cb18e1c0af7af03a25edac",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/ksql.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4cab8b51e3975c7fce9b4d02f75a00400df09ad1e040916502aed95e3329799d",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/control_center.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "da2ed954facc8ef78410fc2a337119ea957573189b5e474deb49bb7e732f9f4a",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/kafka_connect.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c220449be2a67389a4a84f86381730dbbff5559726ab9f83ec04dba4b8b63b86",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/kafka_connect.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5303355023f72861ef622558e7ef81296486c57e62d8b7064c25c757bde5fc2b",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/kafka_rest.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f2de7c6355df9ab69886cc7694d01770f8102c2e0b37865b0ab57d54a8fc8647",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/schema_registry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77ffe0e28876bd0ef44dc3eeeb0c18c3d325ae52b9c9b93ea4fa58a21c8fc294",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/control_center.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "438982a8f86be4ecf5cfeec90ad706b2656bc7a9a6f58fec9e4d6e8c4019eb77",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/kafka_replicator.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f30fa9e56c4ce3287cab4a265fdb530ef91240d840d1b2dd256d68c439486d03",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/ksql.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c8b15b6fe3b5b75e5aae6d90995b764b7d046c6ecb74f158fbb963a5e4151f24",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/kafka_broker.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc09a07bfc20abf8936e9ded9883278e827b3742da63239ca16efbc581464bc3",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/config/zookeeper.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f1cb5613cc13bfe936a0830db888aca8b6cc96283de452819bb31154cf1aaf59",
+   "format": 1
+  },
+  {
+   "name": "discovery/service/schema_registry.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "11567e38c26ed99bdaaced99bb9860369d4c4053fdbac0c14961159d25f13c66",
+   "format": 1
+  },
+  {
+   "name": "discovery/manager",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "discovery/manager/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "discovery/manager/manager.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c76b9fffe538e9dacb9d04a9d2b2e2a2bb47c44f41ef051a4c492d79d1740d66",
+   "format": 1
+  },
+  {
+   "name": "discovery/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "discovery/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3cb6579e7d9864cb50f8886cc6fe509f891fa3efd7776078708d5705b40cd89d",
+   "format": 1
+  },
+  {
+   "name": ".github",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/PULL_REQUEST_TEMPLATE.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "05b3eea1f53358c3dede9b0ec73de338fb917cb7e0f9aea8f6dc35d966db42f4",
+   "format": 1
+  },
+  {
+   "name": ".github/CODEOWNERS",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8de6b3b974db244f2109ad3685409ed9ea5274c2b803f092556ae433fe703f1",
+   "format": 1
+  },
+  {
+   "name": ".github/workflows",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/workflows/linter.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cda9308e4d14520e6170203d5118923623fa867acc4f9fd784b315652dc1ab14",
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".github/ISSUE_TEMPLATE/issue-report.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "771f011495433c1db9b03b48d14046cdea5a4b992393dca9f21525fe1d3a7142",
+   "format": 1
+  },
+  {
+   "name": "playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/tasks/certificate_authority.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67a111e25e5935131ce2e16d6066b3e72f0f299984644849fff123027a1ae057",
+   "format": 1
+  },
+  {
+   "name": "playbooks/all.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "23129159d96ee69249bdaa3db7de56ffe36fd911766cd062f0c0af97a77e611d",
+   "format": 1
+  },
+  {
+   "name": "playbooks/kafka_connect.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f0e346e5ec0cfa43c7039efd101a4ee3aee1ccfbc49c3e4a21e06b0943ee4982",
+   "format": 1
+  },
+  {
+   "name": "playbooks/kafka_rest.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d9afc29e2160019cfb1c753cfeb71d43fa6876df8b50ec7d82feb9dc15d23fee",
+   "format": 1
+  },
+  {
+   "name": "playbooks/schema_registry.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c601b846b7a0a5a9c988aec83e42960d49ddeff3a912fa6ea3491f594a4fd77a",
+   "format": 1
+  },
+  {
+   "name": "playbooks/control_center.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0c588ad7fdb40b6e45053658032210a60c2acb159b755b32ac8eedecddfda2a5",
+   "format": 1
+  },
+  {
+   "name": "playbooks/ksql.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5a23e2baad95c5dcb96365863158bd914a277fc9f67d6bb1ce46e7e4b4f92131",
+   "format": 1
+  },
+  {
+   "name": "playbooks/health_check.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "228e91491dc2d9c44f44eb9ccfc6307417206f3a8474483b12af7bfb24e24e91",
+   "format": 1
+  },
+  {
+   "name": "playbooks/kafka_broker.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b7fb75f7cd558d9630beb84a9efce453730e21f620087bdb5fb089fd3b3eace7",
+   "format": 1
+  },
+  {
+   "name": "playbooks/kafka_connect_replicator.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8df42a6b8277caa5c63eb6e40be904a95837ef0319b7602f642b80ed916d6ff9",
+   "format": 1
+  },
+  {
+   "name": "playbooks/zookeeper.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f199df42cfb4941ad5bdef4e077bbf9266386bafd6069a9616210c04c03450b7",
+   "format": 1
+  },
+  {
+   "name": "playbooks/validate_hosts.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "16407f704c9163850479ae401777a632c7edee78d3d258fac8e620702816812d",
+   "format": 1
+  },
+  {
+   "name": "playbooks/kafka_controller.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2254a8d2a5a335aa06b38b91edc720f056ddb5dfc2e9158580c693c0164b3288",
+   "format": 1
+  },
+  {
+   "name": "playbooks/fetch_logs.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88fc787d3b3f67e760e3bfdee917d4aa90dc9482de37742784691af16d7885fe",
+   "format": 1
+  },
+  {
+   "name": "playbooks/restart.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77c672a801f8361bcce32ff282e59fe53f5d92523601db07564ddaa939e13584",
+   "format": 1
+  },
+  {
+   "name": "galaxy_importer",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "galaxy_importer/galaxy-importer.cfg",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a78c664be8dc393ea152c5e89d8ab2d920b1c52184321d1ffb5d0ea8d1226f8",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

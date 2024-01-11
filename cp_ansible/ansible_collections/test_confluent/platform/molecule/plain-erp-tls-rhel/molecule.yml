@@ -1,0 +1,53 @@
+---
+### Installation of Confluent Platform on centos8.
+### SASL Plain enabled.
+### TLS enabled on ERP only.
+
+driver:
+  name: docker
+platforms:
+  - name: ${KRAFT_CONTROLLER:-zookeeper}1
+    hostname: ${KRAFT_CONTROLLER:-zookeeper}1.confluent
+    groups:
+      - ${CONTROLLER_HOSTGROUP:-zookeeper}
+    image: geerlingguy/docker-centos8-ansible
+    dockerfile: ../Dockerfile-rhel-java17.j2
+    command: ""
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      - name: confluent
+  - name: kafka-broker1
+    hostname: kafka-broker1.confluent
+    groups:
+      - kafka_broker
+    image: geerlingguy/docker-centos8-ansible
+    dockerfile: ../Dockerfile-rhel-java17.j2
+    command: ""
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    networks:
+      - name: confluent
+  - name: control-center1
+    hostname: control-center1.confluent
+    groups:
+      - control_center
+    image: geerlingguy/docker-centos8-ansible
+    dockerfile: ../Dockerfile-rhel-java17.j2
+    command: ""
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+    published_ports:
+      - "9021:9021"
+    networks:
+      - name: confluent
+provisioner:
+  inventory:
+    group_vars:
+      all:
+        sasl_protocol: plain
+
+        kafka_broker_rest_ssl_enabled: true

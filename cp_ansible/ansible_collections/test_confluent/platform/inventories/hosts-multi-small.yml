@@ -1,0 +1,157 @@
+---
+all:
+  vars:
+    ### ansible
+    ansible_connection: ssh
+    ansible_user: confluent
+    ansible_become: true
+    mask_secrets: false
+    mask_sensitive_logs: false
+    mask_sensitive_diff: false
+    
+    ### os user and group
+    archive_owner: root
+    archive_group: root
+    zookeeper_user: zookeeper
+    zookeeper_group: zookeeper
+    kafka_broker_user: kafka
+    kafka_broker_group: kafka
+  
+    health_checks_enabled: true
+    skip_restarts: false
+
+    ### jdk
+    custom_java_path: "/usr/lib/jvm/java-17-openjdk-arm64"
+    
+    ### package install
+    confluent_server_enabled: true
+    confluent_package_version: "7.4.3"
+    confluent_cli_download_enabled: false
+    installation_method: archive
+    archive_destination_path: "/engn"
+    confluent_archive_file_remote: false
+    confluent_archive_file_source: "/home/confluent/installer/confluent-7.4.3.tar.gz"
+    config_prefix: ""
+    zookeeper_config_prefix: "/zookeeper"
+    kafka_broker_config_prefix: "/kafka"
+
+    ### deployment strategy
+    deployment_strategy: parallel
+
+    ### sasl authentication
+    sasl_protocol: none 
+
+    ### component cluster group
+    #kafka_connect_cluster_ansible_group_names:
+    #  - small-one-cluster
+    #ksql_cluster_ansible_group_names:
+    #  - tester-ksql
+
+    ### ssl
+    ssl_enabled: false
+    ssl_mutual_auth_enabled: false
+
+    ### kafka listeners
+    kafka_broker_configure_multiple_listeners: false
+    kafka_broker_configure_control_plane_listener: false
+
+    ### monitoring
+    jmxexporter_enabled: false
+
+    ### copy files
+    zookeeper_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/zookeeper-log4j.properties"
+        destination_path: "{{archive_destination_path}}/zookeeper/zookeeper-log4j.properties"
+    kafka_broker_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/kafka-log4j.properties"
+        destination_path: "{{archive_destination_path}}/kafka/kafka-log4j.properties"
+    kafka_connect_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/kafka-connect-log4j.properties"
+        destination_path: "{{archive_destination_path}}/connect/kafka-connect-log4j.properties"
+    schema_registry_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/schema-registry-log4j.properties"
+        destination_path: "{{archive_destination_path}}/schema-registry/schema-registry-log4j.properties"
+    control_center_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/control-center-log4j.properties"
+        destination_path: "{{archive_destination_path}}/control-center/control-center-log4j.properties"
+    ksql_copy_files:
+      - source_path: "/home/confluent/confluent/cp_ansible/source/log4j/ksqldb-log4j.properties"
+        destination_path: "{{archive_destination_path}}/ksql/ksqldb-log4j.properties"
+
+    ### zookeeper
+    zookeeper_chroot: /confluent
+    zookeeper_log_dir: /logs/zookeeper
+    zookeeper_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xms512m -Xmx512m"
+      KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      KAFKA_GC_LOG_OPTS: "-Xlog:gc*:file={{zookeeper_log_dir}}/zookeeper-gc.log:time,tags:filecount=10,filesize=100M"
+      KAFKA_JMX_OPTS: "-Dzookeeper.kerberos.removeHostFromPrincipal=true -Dzookeeper.kerberos.removeRealmFromPrincipal=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/zookeeper/zookeeper-log4j.properties"
+
+    ### kafka
+    kafka_broker_log_dir: /logs/kafka
+    kafka_broker_service_environment_overrides:
+      KAFKA_HEAP_OPTS: "-Xms2g -Xmx2g"
+      KAFKA_JVM_PERFORMANCE_OPTS: "-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true"
+      KAFKA_GC_LOG_OPTS: "-Xlog:gc*:file={{kafka_broker_log_dir}}/kafka-gc.log:time,tags:filecount=10,filesize=100M"
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
+      KAFKA_LOG4J_OPTS: "-Dlog4j.configuration=file:{{archive_destination_path}}/kafka/kafka-log4j.properties"
+ 
+zookeeper:
+  vars:
+    zookeeper_client_port: 2181
+    zookeeper_peer_port: 2888
+    zookeeper_leader_port: 3888
+    zookeeper_custom_properties:
+      dataDir: /data/zookeeper
+      tickTime: 2000
+      initLimit: 5
+      syncLimit: 2
+      maxClientCnxns: 0
+      autopurge.snapRetainCount: 10
+      autopurge.purgeInterval: 1
+      admin.enableServer: "false"
+      4lw.commands.whitelist: mntr,ruok,stat,srvr
+  hosts:
+    data01.young.com:
+      zookeeper_id: 101
+    data02.young.com:
+      zookeeper_id: 102
+    data03.young.com:
+      zookeeper_id: 103
+
+kafka_broker:
+  vars:
+    kafka_broker_custom_properties:
+      log.dirs: /data/kafka
+      log.retention.hours: 72
+      log.retention.check.interval.ms: 300000
+      log.segment.bytes: 1073741824
+      log.cleanup.policy: delete
+      num.io.threads: 16
+      num.network.threads: 8
+      num.partitions: 2
+      num.recovery.threads.per.data.dir: 1
+      message.max.bytes: 20971760
+      default.replication.factor: 3
+      min.insync.replicas: 3
+      replica.lag.time.max.ms: 30000
+      unclean.leader.election.enable: "false"
+      auto.create.topics.enable: "false"
+      group.initial.rebalance.delay.ms: 3000
+      offsets.topic.replication.factor: 3
+      transaction.state.log.min.isr: 2
+      transaction.state.log.replication.factor: 3
+      confluent.balancer.enable: "false"
+      confluent.balancer.heal.uneven.load.trigger: EMPTY_BROKER
+      confluent.balancer.disk.max.load: 0.85
+      confluent.balancer.topic.replication.factor: 3
+      confluent.tier.enable: "false"
+      zookeeper.set.acl: false
+  hosts:
+    data01.young.com:
+      broker_id: 1
+    data02.young.com:
+      broker_id: 2
+    data03.young.com:
+      broker_id: 3

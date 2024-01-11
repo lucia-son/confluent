@@ -5,6 +5,7 @@ all:
     ansible_connection: ssh
     ansible_user: confluent
     ansible_become: true
+    ansible_python_interpreter: /usr/bin/python3.11
     mask_secrets: false
     mask_sensitive_logs: false
     mask_sensitive_diff: false
